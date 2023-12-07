@@ -11,7 +11,7 @@ const props = defineProps<{
     <div class="flex flex-col aspect-video p-6 justify-between items-start rounded-2xl bg-cover" :style="{
         background: `linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.95) 100%)${image ? `, url(${image})` : ''}`
     }">
-        <div class="bg-blue-500 shadow px-3 py-1 rounded text-xs font-bold text-white">
+        <div class="bg-sky-600 shadow px-3 py-1 rounded text-xs font-bold text-white">
             {{ props.framework }}
         </div>
         <div>
