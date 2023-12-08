@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <button class="px-4 py-2 bg-black hover:bg-bgs-heroShine transition-colors text-white rounded">
+    <button class="px-4 py-2 bg-black hover:bg-bgs-highlight transition-colors text-white rounded">
         <slot />
     </button>
 </template>

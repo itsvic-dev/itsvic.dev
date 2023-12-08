@@ -9,7 +9,8 @@ export default {
             colors: {
                 bgs: {
                     black: 'black',
-                    heroShine: 'hsl(0, 0%, 16%)',
+                    heroShine: 'hsl(239, 15%, 16%)',
+                    highlight: 'hsl(0, 0%, 23%)',
                 },
                 mainText: 'hsl(0, 0%, 25%)',
                 headerText: 'black',
