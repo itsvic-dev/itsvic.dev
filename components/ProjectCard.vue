@@ -13,8 +13,8 @@ const width = ref(0);
 const height = ref(0);
 
 useResizeObserver(el, (entries) => {
-  width.value = Math.round(entries[0].contentRect.width);
-  height.value = Math.round(entries[0].contentRect.height);
+  width.value = Math.round(entries[0].borderBoxSize![0].inlineSize);
+  height.value = Math.round(entries[0].borderBoxSize![0].blockSize);
 });
 
 const img = useImage();
