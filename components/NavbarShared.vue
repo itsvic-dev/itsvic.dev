@@ -12,7 +12,9 @@ watch([width], ([width]) => {
 
 <template>
   <div class="flex text-contrastText w-full justify-between mx-auto max-w-7xl">
-    <p class="italic font-bold">it's vic!</p>
+    <p class="italic font-bold">
+      <NuxtLink to="/">it's vic!</NuxtLink>
+    </p>
     <button
       :class="[
         'w-6 h-6 sm:hidden relative transition-transform duration-300',

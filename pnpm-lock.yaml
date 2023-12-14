@@ -17,6 +17,9 @@ dependencies:
   '@vueuse/core':
     specifier: ^10.7.0
     version: 10.7.0(vue@3.3.10)
+  simple-icons:
+    specifier: ^10.2.0
+    version: 10.2.0
 
 devDependencies:
   '@nuxt/devtools':
@@ -6093,6 +6096,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /simple-icons@10.2.0:
+    resolution: {integrity: sha512-NBCvnCEoNAFC6ihODFWPq372NRvD84m1iRRxRtw9e30F7TgX/l/I5jBF1XlHehj5pMgQo0S4m/3cOqafAQhq7w==}
+    engines: {node: '>=0.12.18'}
+    dev: false
 
   /simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}

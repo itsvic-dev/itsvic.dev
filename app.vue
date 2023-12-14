@@ -5,6 +5,10 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
+  title: "it's vic!",
+  bodyAttrs: {
+    class: "flex flex-col text-mainText",
+  },
 });
 </script>
 

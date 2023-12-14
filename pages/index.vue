@@ -1,28 +1,16 @@
 <script setup lang="ts">
 import projects from "~/assets/projectsTemp.json";
-
-definePageMeta({
-  layout: "nav-fixed",
-});
-
-useHead({
-  title: "it's vic!",
-  bodyAttrs: {
-    class: "flex flex-col text-mainText",
-  },
-});
 </script>
 
 <template>
   <!-- hero -->
-  <header
-    class="bg-gradient-to-b from-bgs-black to-bgs-heroShine text-white flex flex-col items-center py-48 px-16 text-center"
-  >
-    <p class="text-2xl italic text-contrastSecondaryText">hey,</p>
-    <h1 class="font-display text-5xl italic font-black">it's vic!</h1>
-    <p class="text-xl mt-1">a software developer and designer.</p>
-  </header>
-  <main class="mx-auto max-w-7xl mt-20 px-16">
+  <Header
+    pre-title="hey,"
+    title="it's vic!"
+    tagline="a software developer and designer."
+  />
+
+  <main class="mx-auto max-w-7xl my-16 px-8 md:px-16">
     <h1 class="text-4xl font-bold italic text-headerText">About me</h1>
     <p class="mt-2">
       hi there! I'm an 18 year old software developer and designer from Poland.
@@ -32,7 +20,7 @@ useHead({
       can check them out below!
     </p>
 
-    <hr class="h-1 my-12 bg-black/10 rounded-full" />
+    <Separator />
 
     <div class="flex justify-between items-center gap-6 flex-wrap">
       <div>
@@ -51,7 +39,7 @@ useHead({
       <BlogCard title="Blog post" shortDesc="Indeed a blog post." image="" />
     </div>
 
-    <hr class="h-1 my-12 bg-black/10 rounded-full" />
+    <Separator />
 
     <div class="flex justify-between items-center gap-6 flex-wrap">
       <div>
@@ -75,7 +63,7 @@ useHead({
     </div>
 
     <!-- TODO: social media section
-    <hr class="h-1 my-12 bg-black/10 rounded-full" />
+    <Separator />
     <h1 class="text-4xl font-bold italic text-headerText">Social media</h1>
     <p class="mt-1">you can find my thoughts in lots of places.</p>
     -->
