@@ -74,10 +74,10 @@ useHead({
       />
     </div>
 
+    <!-- TODO: social media section
     <hr class="h-1 my-12 bg-black/10 rounded-full" />
-
     <h1 class="text-4xl font-bold italic text-headerText">Social media</h1>
     <p class="mt-1">you can find my thoughts in lots of places.</p>
-    <!-- TODO -->
+    -->
   </main>
 </template>
