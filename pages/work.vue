@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import { siDiscord } from "simple-icons";
+
+useSeoMeta({
+  title: "Commissions - it's vic!",
+  ogTitle: "it's vic! Commissions",
+  description: "Elevate your brand with a touch of uniqueness and style. ",
+  ogDescription: "Elevate your brand with a touch of uniqueness and style. ",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>

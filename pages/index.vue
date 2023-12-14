@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import projects from "~/assets/projectsTemp.json";
+
+useSeoMeta({
+  title: "it's vic!",
+  ogTitle: "it's vic!",
+  description: "A software developer and designer from Poland.",
+  ogDescription: "A software developer and designer from Poland.",
+  twitterCard: "summary_large_image",
+});
 </script>
 
 <template>

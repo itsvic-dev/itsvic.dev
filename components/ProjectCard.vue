@@ -39,7 +39,7 @@ const backgroundStyles = computed(() => {
     :style="backgroundStyles"
   >
     <div
-      class="bg-sky-600 shadow px-3 py-1 rounded text-xs font-bold text-white"
+      class="bg-sky-700 shadow px-3 py-1 rounded text-xs font-bold text-white"
     >
       {{ props.framework }}
     </div>
