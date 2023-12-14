@@ -9,7 +9,7 @@ const props = defineProps<{
 
 <template>
   <div
-    class="flex flex-col aspect-video p-6 justify-between items-start rounded-2xl bg-cover"
+    class="flex flex-col gap-4 aspect-video p-6 justify-between items-start rounded-2xl bg-cover"
     :style="{
       backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.95) 100%)${
         image ? `, url(${image})` : ''

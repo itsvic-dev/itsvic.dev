@@ -14,13 +14,9 @@ useHead({
 </script>
 
 <template>
-  <!-- navbar -->
-  <nav class="top-0 fixed w-full px-8 py-4 backdrop-blur-lg bg-bgs-black/70">
-    <p class="italic font-bold text-contrastText">it's vic!</p>
-  </nav>
   <!-- hero -->
   <header
-    class="bg-gradient-to-b from-bgs-black to-bgs-heroShine text-white flex flex-col items-center py-48"
+    class="bg-gradient-to-b from-bgs-black to-bgs-heroShine text-white flex flex-col items-center py-48 px-16 text-center"
   >
     <p class="text-2xl italic text-contrastSecondaryText">hey,</p>
     <h1 class="font-display text-5xl italic font-black">it's vic!</h1>
@@ -38,12 +34,12 @@ useHead({
 
     <hr class="h-1 my-12 bg-black/10 rounded-full" />
 
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center gap-6 flex-wrap">
       <div>
         <h1 class="text-4xl font-bold italic text-headerText">
           Latest blog posts
         </h1>
-        <p>[CHANGEME] the ramblings of a deranged mind.</p>
+        <p class="mt-1">[CHANGEME] the ramblings of a deranged mind.</p>
       </div>
       <NuxtLink to="/blog">
         <Button>Show all</Button>
@@ -57,12 +53,12 @@ useHead({
 
     <hr class="h-1 my-12 bg-black/10 rounded-full" />
 
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center gap-6 flex-wrap">
       <div>
         <h1 class="text-4xl font-bold italic text-headerText">
           Latest projects
         </h1>
-        <p>some of the stuff I work on.</p>
+        <p class="mt-1">some of the stuff I work on.</p>
       </div>
       <NuxtLink to="/projects">
         <Button>Show all</Button>
@@ -81,7 +77,7 @@ useHead({
     <hr class="h-1 my-12 bg-black/10 rounded-full" />
 
     <h1 class="text-4xl font-bold italic text-headerText">Social media</h1>
-    <p>you can find my thoughts in lots of places.</p>
+    <p class="mt-1">you can find my thoughts in lots of places.</p>
     <!-- TODO -->
   </main>
 </template>
