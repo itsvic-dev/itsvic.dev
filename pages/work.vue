@@ -22,7 +22,12 @@ useSeoMeta({
           a design that will truly resonate with your brand and your customers.
         </p>
       </div>
-      <NuxtImg class="max-w-sm rounded-lg shadow-md" src="/imgs/dream.png" />
+      <NuxtPicture
+        :img-attrs="{
+          class: 'max-w-sm rounded-lg shadow-md',
+        }"
+        src="/imgs/dream.png"
+      />
     </section>
 
     <Separator />
@@ -35,7 +40,12 @@ useSeoMeta({
           to ensure your product runs smoothly, no matter the circumstance.
         </p>
       </div>
-      <NuxtImg class="max-w-sm rounded-lg shadow-md" src="/imgs/codesss.png" />
+      <NuxtPicture
+        :img-attrs="{
+          class: 'max-w-sm rounded-lg shadow-md',
+        }"
+        src="/imgs/codesss.png"
+      />
     </section>
 
     <Separator />
@@ -48,9 +58,18 @@ useSeoMeta({
     </p>
 
     <div class="flex justify-evenly gap-6 items-center flex-wrap mt-4">
-      <NuxtImg class="max-h-[64px]" src="/imgs/strawber.png" />
-      <NuxtImg class="max-h-[76px]" src="/imgs/realms.png" />
-      <NuxtImg class="max-h-[48px]" src="/imgs/stellanode.svg" />
+      <NuxtPicture
+        :img-attrs="{ class: 'max-h-[64px]' }"
+        src="/imgs/strawber.png"
+      />
+      <NuxtPicture
+        :img-attrs="{ class: 'max-h-[76px]' }"
+        src="/imgs/realms.png"
+      />
+      <NuxtPicture
+        :img-attrs="{ class: 'max-h-[48px]' }"
+        src="/imgs/stellanode.svg"
+      />
     </div>
   </main>
 
