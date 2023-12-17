@@ -36,8 +36,10 @@ watch([width], ([width]) => {
       />
     </button>
     <div class="hidden sm:flex items-center gap-4">
+      <!--
       <NuxtLink to="/blog">Blog</NuxtLink>
       <NuxtLink to="/projects">Projects</NuxtLink>
+      -->
       <NuxtLink to="/work">Commissions</NuxtLink>
     </div>
   </div>
@@ -50,8 +52,10 @@ watch([width], ([width]) => {
         : 'max-h-24  mt-4',
     ]"
   >
+    <!--
     <NuxtLink to="/blog">Blog</NuxtLink>
     <NuxtLink to="/projects">Projects</NuxtLink>
+    -->
     <NuxtLink to="/work">Commissions</NuxtLink>
   </div>
 </template>
