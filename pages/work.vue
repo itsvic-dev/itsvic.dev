@@ -24,7 +24,7 @@ useSeoMeta({
       </div>
       <NuxtPicture
         :img-attrs="{
-          class: 'max-w-sm rounded-lg shadow-md',
+          class: 'w-full md:max-w-sm rounded-lg shadow-md',
         }"
         src="/imgs/dream.png"
       />
@@ -42,7 +42,7 @@ useSeoMeta({
       </div>
       <NuxtPicture
         :img-attrs="{
-          class: 'max-w-sm rounded-lg shadow-md',
+          class: 'w-full md:max-w-sm rounded-lg shadow-md',
         }"
         src="/imgs/codesss.png"
       />
@@ -58,18 +58,9 @@ useSeoMeta({
     </p>
 
     <div class="flex justify-evenly gap-6 items-center flex-wrap mt-4">
-      <NuxtPicture
-        :img-attrs="{ class: 'max-h-[64px]' }"
-        src="/imgs/strawber.png"
-      />
-      <NuxtPicture
-        :img-attrs="{ class: 'max-h-[76px]' }"
-        src="/imgs/realms.png"
-      />
-      <NuxtPicture
-        :img-attrs="{ class: 'max-h-[48px]' }"
-        src="/imgs/stellanode.svg"
-      />
+      <NuxtImg class="max-h-[64px]" src="/imgs/strawber.png" />
+      <NuxtImg class="max-h-[76px]" src="/imgs/realms.png" />
+      <NuxtImg class="max-h-[48px]" src="/imgs/stellanode.svg" />
     </div>
   </main>
 
