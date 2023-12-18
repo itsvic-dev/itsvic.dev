@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import projects from "~/assets/projectsTemp.json";
+const projects = await queryContent("/projects").find();
 </script>
 <template>
   <Header title="Projects" tagline="some of the stuff I work on." />
@@ -19,7 +19,7 @@ import projects from "~/assets/projectsTemp.json";
           <p>{{ project.shortDescription }}</p>
         </div>
         <div>
-          <NuxtLink :to="`/projects/${project.id}`">
+          <NuxtLink :to="project._path">
             <Button>Learn more</Button>
           </NuxtLink>
         </div>

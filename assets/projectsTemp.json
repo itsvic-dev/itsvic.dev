@@ -1,9 +1,0 @@
-[
-    {
-        "id": "browser",
-        "title": "Browser",
-        "framework": "C++",
-        "shortDescription": "A work-in-progress browser written from scratch.",
-        "image": "/imgs/codesss.png"
-    }
-]

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import projects from "~/assets/projectsTemp.json";
+const projects = await queryContent("/projects").limit(3).find();
 import blog from "~/assets/blogTemp.json";
 
 useSeoMeta({
@@ -69,12 +69,9 @@ useSeoMeta({
       </NuxtLink>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
-      <NuxtLink
-        v-for="project in projects.slice(0, 3)"
-        :to="`/projects/${project.id}`"
-      >
+      <NuxtLink v-for="project in projects" :to="project._path">
         <ProjectCard
-          :title="project.title"
+          :title="project.title!"
           :framework="project.framework"
           :short-desc="project.shortDescription"
           :image="project.image"

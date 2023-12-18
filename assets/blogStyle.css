@@ -1,0 +1,19 @@
+.blog {
+  @apply max-w-6xl mx-auto my-16;
+
+  h1 {
+    @apply text-4xl font-bold font-display italic text-black mb-2;
+  }
+
+  p {
+    @apply mb-2;
+  }
+
+  h2 {
+    @apply text-2xl text-black font-bold mt-6;
+  }
+
+  strong {
+    @apply text-black;
+  }
+}
