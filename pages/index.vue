@@ -30,9 +30,6 @@ useSeoMeta({
 
     <Separator />
 
-    <p>This website is still a work-in-progress, sorry!</p>
-
-    <!--
     <div class="flex justify-between items-center gap-6 flex-wrap">
       <div>
         <h1 class="text-4xl font-bold italic text-headerText">
@@ -72,7 +69,6 @@ useSeoMeta({
         :image="project.image"
       />
     </div>
-    -->
 
     <!-- TODO: social media section
     <Separator />
