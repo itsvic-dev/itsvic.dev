@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const projects = await queryContent("/projects").sort({ pubDate: -1 }).find();
+const { data: projects } = useAsyncData("projects", () =>
+  queryContent("/projects")
+    .sort({ pubDate: -1 })
+    .limit(3)
+    .only(["title", "shortDescription", "image", "framework", "_path"])
+    .find()
+);
 </script>
 <template>
   <Header title="Projects" tagline="some of the stuff I work on." />
