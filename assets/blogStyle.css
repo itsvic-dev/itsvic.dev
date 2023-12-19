@@ -1,5 +1,5 @@
 .blog {
-  @apply max-w-6xl mx-auto my-16;
+  @apply max-w-6xl mx-auto my-16 px-8;
 
   h1 {
     @apply text-4xl font-bold font-display italic text-black mb-2;
@@ -15,5 +15,9 @@
 
   strong {
     @apply text-black;
+  }
+
+  :not(h2) > a {
+    @apply text-blue-700 underline;
   }
 }

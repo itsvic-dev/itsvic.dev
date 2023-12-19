@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import blog from "~/assets/blogTemp.json";
+const blog = await queryContent("/blog").sort({ pubDate: -1 }).find();
 </script>
 <template>
   <Header title="Blog" tagline="some of the stuff I write about." />
@@ -19,7 +19,7 @@ import blog from "~/assets/blogTemp.json";
           <p>{{ blogPost.shortDescription }}</p>
         </div>
         <div>
-          <NuxtLink :to="`/blog/${blogPost.id}`">
+          <NuxtLink :to="blogPost._path">
             <Button>Read more</Button>
           </NuxtLink>
         </div>

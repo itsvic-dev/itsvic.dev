@@ -1,6 +1,9 @@
 <script setup lang="ts">
-const projects = await queryContent("/projects").limit(3).find();
-import blog from "~/assets/blogTemp.json";
+const projects = await queryContent("/projects")
+  .sort({ pubDate: -1 })
+  .limit(3)
+  .find();
+const blog = await queryContent("/blog").sort({ pubDate: -1 }).limit(3).find();
 
 useSeoMeta({
   title: "it's vic!",
@@ -43,12 +46,9 @@ useSeoMeta({
       </NuxtLink>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
-      <NuxtLink
-        :to="`/blog/${blogPost.id}`"
-        v-for="blogPost in blog.slice(0, 3)"
-      >
+      <NuxtLink v-for="blogPost in blog" :to="blogPost._path">
         <BlogCard
-          :title="blogPost.title"
+          :title="blogPost.title!"
           :short-desc="blogPost.shortDescription"
           :image="blogPost.image"
         />

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import "~/assets/blogStyle.css";
 const { params } = useRoute();
-const project = await queryContent()
+const blogPost = await queryContent()
   .where({
-    _id: `content:projects:${params.item}.md`,
+    _id: `content:blog:${params.item}.md`,
   })
   .findOne();
 
@@ -12,18 +12,18 @@ const rtf = new Intl.RelativeTimeFormat("en", {
   numeric: "auto",
 });
 const dayDiff = Math.round(
-  (+new Date(project.pubDate) - +new Date()) / (24 * 60 * 60 * 60)
+  (+new Date(blogPost.pubDate) - +new Date()) / (24 * 60 * 60 * 60)
 );
 </script>
 <template>
-  <Header :title="project.title!" :tagline="project.shortDescription" />
+  <Header :title="blogPost.title!" :tagline="blogPost.shortDescription" />
 
-  <ContentRenderer :value="project">
+  <ContentRenderer :value="blogPost">
     <article class="blog">
       <p class="text-sm italic mb-2">
         Published {{ rtf.format(dayDiff, "day") }}
       </p>
-      <ContentRendererMarkdown :value="project" />
+      <ContentRendererMarkdown :value="blogPost" />
     </article>
   </ContentRenderer>
 </template>

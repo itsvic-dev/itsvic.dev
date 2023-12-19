@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const projects = await queryContent("/projects").find();
+const projects = await queryContent("/projects").sort({ pubDate: -1 }).find();
 </script>
 <template>
   <Header title="Projects" tagline="some of the stuff I work on." />
@@ -15,7 +15,13 @@ const projects = await queryContent("/projects").find();
       />
       <div class="flex flex-col justify-between sm:py-4 gap-4">
         <div>
-          <h2 class="text-2xl font-bold italic">{{ project.title }}</h2>
+          <h2 class="text-2xl font-bold italic flex items-center gap-4">
+            {{ project.title }}
+            <span
+              class="not-italic text-xs bg-sky-700 text-white rounded-full px-2 py-1"
+              >{{ project.framework }}</span
+            >
+          </h2>
           <p>{{ project.shortDescription }}</p>
         </div>
         <div>
