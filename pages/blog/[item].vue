@@ -13,8 +13,8 @@ const rtf = new Intl.RelativeTimeFormat("en", {
   style: "long",
   numeric: "auto",
 });
-const dayDiff = Math.round(
-  (+new Date(blogPost.value?.pubDate) - +new Date()) / (24 * 60 * 60 * 60)
+const dayDiff = Math.ceil(
+  (+new Date(blogPost.value?.pubDate) - +new Date()) / (24 * 60 * 60 * 1000)
 );
 </script>
 <template>
