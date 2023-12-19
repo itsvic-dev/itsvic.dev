@@ -21,7 +21,9 @@ const { data: blog } = useAsyncData("blog", () =>
       />
       <div class="flex flex-col justify-between sm:py-4 gap-4">
         <div>
-          <h2 class="text-2xl font-bold italic">{{ blogPost.title }}</h2>
+          <h2 class="text-2xl text-black font-bold italic">
+            {{ blogPost.title }}
+          </h2>
           <p>{{ blogPost.shortDescription }}</p>
         </div>
         <div>

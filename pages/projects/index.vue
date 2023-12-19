@@ -21,7 +21,9 @@ const { data: projects } = useAsyncData("projects", () =>
       />
       <div class="flex flex-col justify-between sm:py-4 gap-4">
         <div>
-          <h2 class="text-2xl font-bold italic flex items-center gap-4">
+          <h2
+            class="text-2xl text-black font-bold italic flex items-center gap-4"
+          >
             {{ project.title }}
             <span
               class="not-italic text-xs bg-sky-700 text-white rounded-full px-2 py-1"
