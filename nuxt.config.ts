@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@nuxt/content",
-    "nuxt-simple-sitemap",
     "nuxt-simple-robots",
   ],
 });
