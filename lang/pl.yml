@@ -1,0 +1,25 @@
+general:
+  show-all: Pokaż wszystkie
+  show-more: Pokaż więcej
+  read-more: Czytaj dalej
+
+footer:
+  copyright: Prawa autorskie
+
+index:
+  header:
+    tagline: "programista i projektant oprogramowania."
+  about-me: "O mnie"
+  about-text-1: hejka! jestem 18-letnim programistą i projektantem oprogramowania z Polski.
+  about-text-2: pracuję nad różnymi projektami, i lubię o nich pisać na moim blogu. możesz je sprawdzić poniżej!
+
+  latest-blog: Najnowsze wpisy na blogu
+  latest-projects: Najnowsze projekty
+
+blog:
+  title: Blog
+  tagline: niektóre rzeczy, o których piszę.
+
+projects:
+  title: Projekty
+  tagline: niektóre rzeczy nad którymi pracuję.

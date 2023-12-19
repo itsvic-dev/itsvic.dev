@@ -9,7 +9,8 @@
     </div>
 
     <footer class="py-6 px-4 text-center bg-bgs-black text-contrastText">
-      Copyright &copy; {{ new Date().getFullYear() }} it's vic!
+      {{ $t("footer.copyright") }} &copy; {{ new Date().getFullYear() }} it's
+      vic!
     </footer>
   </div>
 </template>

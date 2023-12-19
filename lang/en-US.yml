@@ -1,0 +1,25 @@
+general:
+  show-all: Show all
+  show-more: Show more
+  read-more: Read more
+
+footer:
+  copyright: Copyright
+
+index:
+  header:
+    tagline: a software developer and designer.
+  about-me: About me
+  about-text-1: hi there! I'm an 18 year old software developer and designer from Poland.
+  about-text-2: I work on various projects, and like to write about them on my blog. you can check them out below!
+
+  latest-blog: Latest blog posts
+  latest-projects: Latest projects
+
+blog:
+  title: Blog
+  tagline: some of the stuff I write about.
+
+projects:
+  title: Projects
+  tagline: some of the stuff I work on.

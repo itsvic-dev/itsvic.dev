@@ -27,30 +27,27 @@ useSeoMeta({
   <Header
     pre-title="hey,"
     title="it's vic!"
-    tagline="a software developer and designer."
+    :tagline="$t('index.header.tagline')"
   />
 
   <main class="mx-auto max-w-7xl my-16 px-8 md:px-16">
-    <h1 class="text-4xl font-bold italic text-headerText">About me</h1>
-    <p class="mt-2">
-      hi there! I'm an 18 year old software developer and designer from Poland.
-    </p>
-    <p class="mt-1">
-      I work on various projects, and like to write about them on my blog. you
-      can check them out below!
-    </p>
+    <h1 class="text-4xl font-bold italic text-headerText">
+      {{ $t("index.about-me") }}
+    </h1>
+    <p class="mt-2">{{ $t("index.about-text-1") }}</p>
+    <p class="mt-1">{{ $t("index.about-text-2") }}</p>
 
     <Separator />
 
     <div class="flex justify-between items-center gap-6 flex-wrap">
       <div>
         <h1 class="text-4xl font-bold italic text-headerText">
-          Latest blog posts
+          {{ $t("index.latest-blog") }}
         </h1>
-        <p class="mt-1">some of the stuff I write about.</p>
+        <p class="mt-1">{{ $t("blog.tagline") }}</p>
       </div>
       <NuxtLink to="/blog">
-        <Button>Show all</Button>
+        <Button>{{ $t("general.show-all") }}</Button>
       </NuxtLink>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
@@ -68,12 +65,12 @@ useSeoMeta({
     <div class="flex justify-between items-center gap-6 flex-wrap">
       <div>
         <h1 class="text-4xl font-bold italic text-headerText">
-          Latest projects
+          {{ $t("index.latest-projects") }}
         </h1>
-        <p class="mt-1">some of the stuff I work on.</p>
+        <p class="mt-1">{{ $t("projects.tagline") }}</p>
       </div>
       <NuxtLink to="/projects">
-        <Button>Show all</Button>
+        <Button>{{ $t("general.show-all") }}</Button>
       </NuxtLink>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
