@@ -2,7 +2,7 @@
 
 <template>
   <button
-    class="px-4 py-2 bg-black hover:bg-bgs-highlight transition-colors text-white rounded"
+    class="px-5 py-2 bg-black hover:bg-bgs-highlight transition-colors text-white rounded"
   >
     <slot />
   </button>
