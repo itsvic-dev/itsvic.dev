@@ -6,6 +6,14 @@ const { data: blog } = useAsyncData("blog", () =>
     .only(["title", "shortDescription", "image", "_path"])
     .find()
 );
+
+useSeoMeta({
+  title: "Blog - it's vic!",
+  ogTitle: "it's vic! Blog",
+  description: "Some of the stuff I write about.",
+  ogDescription: "Some of the stuff I write about.",
+  twitterCard: "summary_large_image",
+});
 </script>
 <template>
   <Header title="Blog" tagline="some of the stuff I write about." />

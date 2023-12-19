@@ -16,6 +16,15 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 const dayDiff = Math.ceil(
   (+new Date(project.value?.pubDate) - +new Date()) / (24 * 60 * 60 * 1000)
 );
+
+useSeoMeta({
+  title: `${project.value?.title} - Projects - it's vic!`,
+  ogTitle: `${project.value?.title} - it's vic! Projects`,
+  description: project.value?.shortDescription,
+  ogDescription: project.value?.shortDescription,
+  ogImage: project.value?.image,
+  twitterCard: "summary_large_image",
+});
 </script>
 <template>
   <Header :title="project?.title!" :tagline="project?.shortDescription" />
