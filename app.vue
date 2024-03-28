@@ -6,6 +6,13 @@ useHead({
     lang: "en",
   },
   title: "it's vic!",
+  script: [
+    {
+      src: "https://plausible.itsvic.dev/js/script.js",
+      defer: true,
+      "data-domain": "itsvic.dev",
+    },
+  ],
 });
 </script>
 
