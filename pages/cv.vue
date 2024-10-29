@@ -7,7 +7,7 @@ const tasks = {
   itsvic: ["productDev", "support", "contract"],
   "tmobile-intern": ["testLab", "ad", "vms", "sccm"],
 };
-const languages = ["english", "polish"];
+const languages = ["polish", "english"];
 </script>
 
 <template>
