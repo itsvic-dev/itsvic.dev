@@ -1,2 +1,42 @@
 cv:
-  birthday: "Urodziny"
+  birthday: "Data urodzenia"
+
+  education:
+    title: "Wykształcenie"
+    technical:
+      name: "Technikum nr 8 im. Jana Karskiego w Warszawie"
+      status: "Ukończone"
+      class: "Technik informatyk"
+
+  skills:
+    title: "Umiejętności"
+    fullstack: "Pełny rozwój stron internetowych (full-stack)"
+    ui: "Projektowanie interfejsów użytkownika i grafiki"
+    native: "Tworzenie natywnych aplikacji i gier"
+
+  jobs:
+    title: "Doświadczenie zawodowe"
+    tasks: "Główne obowiązki:"
+    itsvic:
+      name: "it's vic!"
+      period: "luty 2024 – obecnie"
+      title: "Pełny rozwój stron internetowych (full-stack), projektowanie stron, prace kontraktowe"
+      tasks:
+        productDev: "Tworzenie produktów, takich jak motywy lub rozszerzenia, dla Pterodactyl®, panelu zarządzania serwerami gier opartego na Laravel i React"
+        support: "Świadczenie wsparcia firmom i osobom fizycznym w zakresie tych produktów"
+        contract: "Praca kontraktowa z firmami w celu tworzenia niestandardowych motywów lub funkcjonalności dla ich paneli Pterodactyl®"
+
+    tmobile-intern:
+      name: "T-Mobile Polska S.A."
+      period: "styczeń 2023"
+      title: "Praktyka jako administrator systemów"
+      tasks:
+        testLab: "Instalacja i konfiguracja maszyny wirtualnej z systemem Windows Server w laboratorium testowym"
+        ad: "Konfiguracja kontrolera domeny Active Directory"
+        vms: "Instalacja i konfiguracja dwóch maszyn wirtualnych z Windows 10 połączonych z domeną AD"
+        sccm: "Konfiguracja i użycie Microsoft Configuration Manager (SCCM)"
+
+  languages:
+    title: "Umiejętności językowe"
+    polish: "Polski: ojczysty"
+    english: "Angielski: komunikatywny"

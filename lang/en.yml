@@ -20,7 +20,7 @@ cv:
 
     itsvic:
       name: "it's vic!"
-      period: "February 2024 – now"
+      period: "February 2024 – present"
       title: "Full-stack web development, web design, contract work"
       tasks:
         productDev: "Development of products, such as themes or extensions, for Pterodactyl®, a game server management panel made with Laravel and React"
