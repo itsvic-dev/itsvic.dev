@@ -24,7 +24,7 @@ import { CakeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
           <span class="font-semibold">
             Technikum nr 8 im. Jana Karskiego w Warszawie
           </span>
-          <span class="ml-2 italic">In progress</span>
+          <span class="ml-2 italic">Complete</span>
           <br />
           IT Systems Administrator and Webmaster
         </li>
