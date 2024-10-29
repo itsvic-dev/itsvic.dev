@@ -15,14 +15,12 @@ export default defineNuxtConfig({
       {
         code: "en",
         iso: "en-US",
-        file: "en-US.yml",
-        name: "🇺🇸 English",
+        file: "en.yml",
       },
       {
         code: "pl",
         iso: "pl-PL",
         file: "pl.yml",
-        name: "🇵🇱 Polski",
       },
     ],
     defaultLocale: "en",

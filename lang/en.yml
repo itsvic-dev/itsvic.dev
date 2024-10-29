@@ -1,0 +1,43 @@
+cv:
+  birthday: "Birthday"
+
+  education:
+    title: "Education"
+    technical:
+      name: "Technikum nr 8 im. Jana Karskiego in Warsaw"
+      status: "Complete"
+      class: "IT Systems Administrator, Web Developer and Webmaster"
+
+  skills:
+    title: "Skills"
+    fullstack: "Full-stack web development"
+    ui: "User interface and graphics design"
+    native: "Native app and game development"
+
+  jobs:
+    title: "Professional Experience"
+    tasks: "Main responsibilities:"
+
+    itsvic:
+      name: "it's vic!"
+      period: "February 2024 – now"
+      title: "Full-stack web development, web design, contract work"
+      tasks:
+        productDev: "Development of products, such as themes or extensions, for Pterodactyl®, a game server management panel made with Laravel and React"
+        support: "Providing support to businesses and individuals for those products"
+        contract: "Contractual work with companies to create custom themes or functionality for their Pterodactyl® panels"
+
+    tmobile-intern:
+      name: "T-Mobile Polska S.A."
+      period: "January 2023"
+      title: "Internship as a System Administrator"
+      tasks:
+        testLab: "Installation and configuration of a Windows Server virtual machine in a test lab"
+        ad: "Configuration of an Active Directory Domain Controller"
+        vms: "Installation and configuration of two Windows 10 virtual machines connected to the AD domain"
+        sccm: "Configuration and usage of Microsoft Configuration Manager (SCCM)"
+
+  languages:
+    title: "Language skills"
+    polish: "Polish: native"
+    english: "English: conversational"

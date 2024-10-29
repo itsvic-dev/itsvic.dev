@@ -1,15 +1,26 @@
 <script setup>
 import { CakeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
+
+const education = ["technical"];
+const jobs = ["itsvic", "tmobile-intern"];
+const tasks = {
+  itsvic: ["productDev", "support", "contract"],
+  "tmobile-intern": ["testLab", "ad", "vms", "sccm"],
+};
+const languages = ["english", "polish"];
 </script>
 
 <template>
-  <div class="py-16 px-4 print:p-4 max-w-5xl mx-auto print:text-black">
+  <main
+    class="py-16 px-4 print:p-4 max-w-5xl space-y-8 mx-auto print:text-black"
+  >
     <div class="flex items-start gap-6">
       <img src="/imgs/icon.png" class="w-24 h-24" />
       <div class="space-y-1">
         <h1 class="text-4xl font-bold font-display">Wiktor Bryk</h1>
         <p class="flex gap-2 items-center">
-          <CakeIcon class="w-6 h-6" title="Birthday" /> 23 May 2005
+          <CakeIcon class="w-6 h-6" :title="$t('cv.birthday')" />
+          {{ $d(new Date(2005, 4, 23), "short") }}
         </p>
         <p class="flex gap-2 items-center">
           <EnvelopeIcon class="w-6 h-6" title="E-mail" /> contact@itsvic.dev
@@ -17,93 +28,76 @@ import { CakeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
       </div>
     </div>
 
-    <div class="mt-8">
-      <h2 class="font-display text-2xl font-bold">Education</h2>
+    <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.education.title") }}
+      </h2>
       <ul class="list-disc ml-8">
-        <li>
+        <li v-for="item of education">
           <span class="font-semibold">
-            Technikum nr 8 im. Jana Karskiego w Warszawie
+            {{ $t(`cv.education.${item}.name`) }}
           </span>
-          <span class="ml-2 italic">Complete</span>
+          <span class="ml-2 italic">
+            {{ $t(`cv.education.${item}.status`) }}
+          </span>
           <br />
-          IT Systems Administrator and Webmaster
+          {{ $t(`cv.education.${item}.class`) }}
         </li>
       </ul>
     </div>
 
-    <div class="mt-8">
-      <h2 class="font-display text-2xl font-bold">Professional Experience</h2>
-      <h3 class="text-xl font-semibold">Full-stack web development</h3>
+    <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.skills.title") }}
+      </h2>
+      <h3 class="text-xl font-semibold">{{ $t("cv.skills.fullstack") }}</h3>
       <p>
-        React, Nuxt.js (Vue), TypeScript, Node.js, Go, PHP (Laravel), Python
-        (Flask, aiohttp)
+        React, Nuxt.js (Vue), TypeScript, Node.js (Express), Go, PHP (Laravel),
+        Python (Flask, aiohttp)
       </p>
 
-      <h3 class="text-xl font-semibold mt-4">User interface design</h3>
+      <h3 class="text-xl font-semibold mt-4">{{ $t("cv.skills.ui") }}</h3>
       <p>Figma, GIMP</p>
 
       <h3 class="text-xl font-semibold mt-4">
-        Native app and game development
+        {{ $t("cv.skills.native") }}
       </h3>
       <p>C, C++, Qt Quick, SDL2, GLFW, OpenGL 3.2+</p>
     </div>
 
-    <div class="mt-8">
-      <h2 class="font-display text-2xl font-bold">Work Experience</h2>
-      <ul class="list-disc ml-8">
-        <li>
-          <span class="font-bold">it's vic!</span> (February 2024 &ndash; now)
-          <br />
-          <i>Full-stack web development, web design</i>
-          <br />
-          Creating paid Pterodactyl themes and extensions such as
-          <a
-            href="https://builtbybit.com/resources/nova.40094/"
-            class="text-blue-500 underline"
-          >
-            Nova
-          </a>
-          <span class="hidden print:inline">
-            (https://builtbybit.com/resources/nova.40094/)
-          </span>
-          or
-          <a
-            href="https://builtbybit.com/resources/trash-bin-for-pterodactyl.38583/"
-            class="text-blue-500 underline"
-          >
-            Trash Bin for Pterodactyl®
-          </a>
-          <span class="hidden print:inline">
-            (https://builtbybit.com/resources/trash-bin-for-pterodactyl.38583/)
-          </span>
-        </li>
-        <li>
-          <span class="font-bold">T-Mobile Polska S.A.</span> (January 2023)
-          <br />
-          <i>Internship as a System Administrator</i>
-          <br />
-          Installation and configuration of Windows Server inside of Hyper-V,
-          managing a test lab composed of two Windows 10 virtual machines and a
-          Windows Server virtual machine
-        </li>
-        <li>
-          <span class="font-bold">Contract work</span> (December 2021 &ndash;
-          now)
-          <br />
-          <i>Full-stack web development, web design</i>
-          <br />
-          Modifying the Pterodactyl game server panel, adding custom-built
-          features to it, creating new panel designs
+    <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.jobs.title") }}
+      </h2>
+      <ul class="list-disc ml-8 space-y-4">
+        <li v-for="item of jobs">
+          <p>
+            <span class="font-bold">{{ $t(`cv.jobs.${item}.name`) }}</span>
+            ({{ $t(`cv.jobs.${item}.period`) }})
+          </p>
+          <p class="italic">
+            {{ $t(`cv.jobs.${item}.title`) }}
+          </p>
+
+          <p class="mt-2">{{ $t("cv.jobs.tasks") }}</p>
+          <ul class="ml-6 list-[circle]">
+            <li v-for="task of tasks[item]">
+              {{ $t(`cv.jobs.${item}.tasks.${task}`) }}
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
 
-    <div class="mt-8">
-      <h2 class="font-display text-2xl font-bold">Language skills</h2>
+    <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.languages.title") }}
+      </h2>
       <ul class="list-disc ml-8">
-        <li>Polish: native</li>
-        <li>English: conversational</li>
+        <li v-for="item of languages">
+          {{ $t(`cv.languages.${item}`) }}
+        </li>
       </ul>
     </div>
-  </div>
+  </main>
 </template>
