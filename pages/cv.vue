@@ -12,7 +12,7 @@ const languages = ["polish", "english"];
 
 <template>
   <main
-    class="py-16 px-4 print:p-4 max-w-5xl space-y-8 mx-auto print:text-black"
+    class="py-16 px-4 print:p-2 max-w-5xl space-y-8 print:space-y-6 mx-auto print:text-black"
   >
     <div class="flex items-start gap-6">
       <img src="/imgs/icon.png" class="w-24 h-24" />
@@ -28,22 +28,35 @@ const languages = ["polish", "english"];
       </div>
     </div>
 
-    <div>
-      <h2 class="font-display text-2xl font-bold">
-        {{ $t("cv.education.title") }}
-      </h2>
-      <ul class="list-disc ml-8">
-        <li v-for="item of education">
-          <span class="font-semibold">
-            {{ $t(`cv.education.${item}.name`) }}
-          </span>
-          <span class="ml-2 italic">
-            {{ $t(`cv.education.${item}.status`) }}
-          </span>
-          <br />
-          {{ $t(`cv.education.${item}.class`) }}
-        </li>
-      </ul>
+    <div class="grid grid-cols-2">
+      <div>
+        <h2 class="font-display text-2xl font-bold">
+          {{ $t("cv.education.title") }}
+        </h2>
+        <ul class="list-disc ml-8">
+          <li v-for="item of education">
+            <span class="font-semibold">
+              {{ $t(`cv.education.${item}.name`) }}
+            </span>
+            <span class="ml-2 italic">
+              {{ $t(`cv.education.${item}.status`) }}
+            </span>
+            <br />
+            {{ $t(`cv.education.${item}.class`) }}
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-display text-2xl font-bold">
+          {{ $t("cv.languages.title") }}
+        </h2>
+        <ul class="list-disc ml-8">
+          <li v-for="item of languages">
+            {{ $t(`cv.languages.${item}`) }}
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div>
@@ -85,17 +98,6 @@ const languages = ["polish", "english"];
               {{ $t(`cv.jobs.${item}.tasks.${task}`) }}
             </li>
           </ul>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="font-display text-2xl font-bold">
-        {{ $t("cv.languages.title") }}
-      </h2>
-      <ul class="list-disc ml-8">
-        <li v-for="item of languages">
-          {{ $t(`cv.languages.${item}`) }}
         </li>
       </ul>
     </div>
