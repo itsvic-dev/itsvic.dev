@@ -25,7 +25,7 @@ cv:
       tasks:
         productDev: "Development of products, such as themes or extensions, for Pterodactyl®, a game server management panel made with Laravel and React"
         support: "Providing support to businesses and individuals for those products"
-        contract: "Contractual work with companies to create custom themes or functionality for their Pterodactyl® panels"
+        contract: "Contract work with companies to develop full-stack web applications"
 
     tmobile-intern:
       name: "T-Mobile Polska S.A."
