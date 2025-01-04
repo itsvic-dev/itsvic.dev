@@ -2,7 +2,7 @@
 const props = defineProps<{
   preTitle?: string;
   title: string;
-  tagline: string;
+  tagline?: string;
 }>();
 </script>
 
@@ -14,6 +14,6 @@ const props = defineProps<{
       {{ preTitle }}
     </p>
     <h1 class="font-display text-5xl italic font-black">{{ title }}</h1>
-    <p class="text-xl mt-1">{{ tagline }}</p>
+    <p v-if="tagline" class="text-xl mt-1">{{ tagline }}</p>
   </header>
 </template>
