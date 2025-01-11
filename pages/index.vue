@@ -1,36 +1,46 @@
+<script setup lang="ts">
+import { siBluesky, siMastodon, siGithub } from "simple-icons";
+</script>
+
 <template>
-  <div
-    class="grid h-screen w-full grid-rows-2 items-center justify-center bg-violet-700 text-purple-50 lg:grid-cols-2 lg:grid-rows-1"
-  >
-    <div class="relative flex h-full items-center justify-center">
-      <div class="px-8">
-        <h1 class="font-display text-4xl font-bold">it's vic!</h1>
-        <p class="text-2xl text-purple-200">{{ $t("home.tagline") }}</p>
+  <div class="relative mb-32 bg-violet-700">
+    <div class="mx-auto px-8 py-32 text-center">
+      <h1 class="font-display text-5xl font-bold text-violet-50">it's vic!</h1>
+      <p class="text-xl text-violet-200">{{ $t("home.tagline") }}</p>
+
+      <div class="mt-4 flex flex-wrap justify-center gap-4">
+        <a
+          href="https://bsky.app/profile/itsvic.dev"
+          target="_blank"
+          rel="noreferer noopener"
+        >
+          <IconButton :icon="siBluesky" color="purple">Bluesky</IconButton>
+        </a>
+        <a
+          href="https://social.itsvic.dev/@vic"
+          target="_blank"
+          rel="noreferer noopener"
+        >
+          <IconButton :icon="siMastodon" color="purple">Fediverse</IconButton>
+        </a>
+        <a
+          href="https://github.com/itsvic-dev"
+          target="_blank"
+          rel="noreferer noopener"
+        >
+          <IconButton :icon="siGithub" color="purple">GitHub</IconButton>
+        </a>
       </div>
-
-      <!-- >=1024px right-side cut -->
-      <svg
-        viewBox="0 0 10 10"
-        class="absolute -right-16 hidden h-full w-16 lg:block"
-        preserveAspectRatio="none"
-      >
-        <polygon points="0 0, 10 0, 0 10" class="fill-violet-700" />
-      </svg>
-
-      <!-- <1024px bottom cut -->
-      <svg
-        viewBox="0 0 10 10"
-        class="absolute -bottom-16 h-16 w-full lg:hidden"
-        preserveAspectRatio="none"
-      >
-        <polygon points="0 0, 10 0, 0 10" class="fill-violet-700" />
-      </svg>
     </div>
 
-    <div
-      class="flex h-full w-screen items-center justify-center bg-zinc-900 lg:w-auto"
+    <svg
+      viewBox="0 0 10 10"
+      class="absolute -bottom-16 h-16 w-full"
+      preserveAspectRatio="none"
     >
-      <p>content content content</p>
-    </div>
+      <polygon points="0 0, 10 0, 0 10" class="fill-violet-700" />
+    </svg>
   </div>
+
+  <p>other content</p>
 </template>
