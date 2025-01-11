@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/image",
@@ -8,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@vueuse/motion/nuxt",
   ],
+
   i18n: {
     lazy: false,
     langDir: "lang",
@@ -15,11 +17,13 @@ export default defineNuxtConfig({
       {
         code: "en",
         iso: "en-US",
+        name: "🇬🇧 English",
         file: "en.yml",
       },
       {
         code: "pl",
         iso: "pl-PL",
+        name: "🇵🇱 Polski",
         file: "pl.yml",
       },
     ],
@@ -30,4 +34,6 @@ export default defineNuxtConfig({
       redirectOn: "root",
     },
   },
+
+  compatibilityDate: "2025-01-11",
 });

@@ -1,5 +1,4 @@
 export default defineI18nConfig(() => ({
-  fallbackLocale: "en",
   datetimeFormats: {
     en: {
       short: {

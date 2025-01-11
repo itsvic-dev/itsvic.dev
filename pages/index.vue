@@ -5,7 +5,7 @@
     <div class="relative flex h-full items-center justify-center">
       <div class="px-8">
         <h1 class="font-display text-4xl font-bold">it's vic!</h1>
-        <p class="text-2xl text-purple-200">Software developer and designer.</p>
+        <p class="text-2xl text-purple-200">{{ $t("home.tagline") }}</p>
       </div>
 
       <!-- >=1024px right-side cut -->

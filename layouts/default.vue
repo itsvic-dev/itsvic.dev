@@ -7,5 +7,7 @@ useHead({
 </script>
 
 <template>
+  <NavBar />
+
   <slot />
 </template>
