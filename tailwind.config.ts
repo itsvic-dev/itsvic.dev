@@ -7,7 +7,7 @@ export default <Config>{
       fontFamily: {
         sans: ['"Inter"', "Helvetica", '"Segoe UI"', "Arial", "sans-serif"],
         display: [
-          '"Inter Tight Variable"',
+          '"Poppins"',
           '"Inter Variable"',
           "Helvetica",
           '"Segoe UI"',

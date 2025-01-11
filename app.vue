@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import "@fontsource-variable/inter/slnt.css";
-import "@fontsource-variable/inter-tight/index.css";
-import "@fontsource-variable/inter-tight/wght-italic.css";
+import "@fontsource-variable/inter";
+import "@fontsource/poppins/700.css";
 
 const { locale } = useI18n();
 

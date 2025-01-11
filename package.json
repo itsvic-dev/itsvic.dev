@@ -15,12 +15,14 @@
     "@nuxtjs/i18n": "8.0.0-rc.11",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "nuxt": "^3.8.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.16",
     "@fontsource-variable/inter-tight": "^5.0.19",
+    "@fontsource/poppins": "^5.1.1",
     "@heroicons/vue": "^2.0.18",
     "@nuxt/content": "^2.9.0",
     "@vueuse/core": "^10.7.0",
