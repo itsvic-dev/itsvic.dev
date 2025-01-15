@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // euro * 100
-const currentAmount = 812;
+const currentAmount = 1246;
 const targetAmount = 440000;
 
 const percentage = (currentAmount / targetAmount) * 100;
