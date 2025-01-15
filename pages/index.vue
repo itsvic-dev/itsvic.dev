@@ -7,6 +7,18 @@ import {
 import ParcelIcon from "~/assets/parcel.png";
 
 const localePath = useLocalePath();
+
+const secretProgress = ref(0);
+
+onMounted(() => {
+  window.addEventListener("keyup", function (ev) {
+    if (ev.key == "y" && secretProgress.value == 0) secretProgress.value++;
+    if (ev.key == "u" && secretProgress.value == 1) secretProgress.value++;
+    if (ev.key == "m" && secretProgress.value == 2) secretProgress.value++;
+    if (ev.key == "e" && secretProgress.value == 3)
+      navigateTo(localePath("/dreams"));
+  });
+});
 </script>
 
 <template>
