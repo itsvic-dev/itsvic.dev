@@ -64,7 +64,7 @@ onMounted(() => {
   <section class="mx-auto w-full max-w-5xl px-8">
     <h2 class="font-display text-3xl font-bold">Projects</h2>
 
-    <div class="mt-6 grid w-full grid-cols-3 gap-4">
+    <div class="mt-6 grid w-full gap-4 md:grid-cols-2 lg:grid-cols-3">
       <ProjectCard
         title="Parcel"
         :iconPath="ParcelIcon"
