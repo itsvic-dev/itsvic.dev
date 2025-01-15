@@ -1,6 +1,10 @@
-<template>
-  <!-- <Header pre-title="Parcel" title="Privacy Policy" /> -->
+<script setup>
+useHead({
+  title: "Parcel Privacy Policy",
+});
+</script>
 
+<template>
   <main class="mx-auto my-16 max-w-7xl px-8 md:px-16">
     <h1 class="mb-8 font-display text-5xl font-bold">Parcel Privacy Policy</h1>
 
