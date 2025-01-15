@@ -2,6 +2,7 @@
 defineProps<{
   title: string;
   iconPath: string;
+  languages?: string[];
 }>();
 </script>
 
@@ -12,8 +13,17 @@ defineProps<{
       {{ title }}
     </h3>
 
+    <div class="mb-2 flex flex-wrap gap-2" v-if="languages?.length !== 0">
+      <p
+        v-for="language in languages"
+        class="rounded-full border border-zinc-600 bg-zinc-700 px-3 py-1 text-sm"
+      >
+        {{ language }}
+      </p>
+    </div>
+
     <slot />
-    <div class="__project_links mt-2 space-y-1">
+    <div class="__project_links mt-4 space-y-1">
       <slot name="links" />
     </div>
   </div>
