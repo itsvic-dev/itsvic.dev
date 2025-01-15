@@ -1,8 +1,10 @@
 <template>
-  <Header pre-title="Parcel" title="Privacy Policy" />
+  <!-- <Header pre-title="Parcel" title="Privacy Policy" /> -->
 
-  <main class="mx-auto max-w-7xl my-16 px-8 md:px-16">
-    <h2 class="text-3xl font-bold mb-2">Data collection and processing</h2>
+  <main class="mx-auto my-16 max-w-7xl px-8 md:px-16">
+    <h1 class="mb-8 font-display text-5xl font-bold">Parcel Privacy Policy</h1>
+
+    <h2 class="mb-2 text-3xl font-bold">Data collection and processing</h2>
     <p>
       Parcel does not collect any data aside from what you enter. Parcel stores
       all user information on-device, and is never uploaded to any server
@@ -16,7 +18,7 @@
 
     <p class="mt-4">
       If you wish to contact me for further inquiries,
-      <a class="text-blue-700 underline" href="mailto:contact@itsvic.dev">
+      <a class="text-blue-400 underline" href="mailto:contact@itsvic.dev">
         you can do so via e-mail.
       </a>
     </p>
