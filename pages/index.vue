@@ -33,11 +33,16 @@ useSeoMeta({
   <main class="mx-auto max-w-7xl my-16 px-8 md:px-16">
     <h1 class="text-4xl font-bold italic text-headerText">About me</h1>
     <p class="mt-2">
-      hi there! I'm an 18 year old software developer and designer from Poland.
+      hi there! I'm a 19 year old software developer and designer from Poland.
     </p>
     <p class="mt-1">
       I work on various projects, and like to write about them on my blog. you
       can check them out below!
+    </p>
+
+    <p class="mt-4">
+      this website sucks ass jesus christ please yell at me to finish the
+      redesign
     </p>
 
     <Separator />
