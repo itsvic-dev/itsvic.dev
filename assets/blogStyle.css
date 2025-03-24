@@ -22,10 +22,14 @@
   }
 
   pre {
-    @apply p-4 bg-gray-100 rounded-lg border border-gray-200 shadow-inner text-sm;
+    @apply p-4 bg-gray-100 rounded-lg border border-gray-200 shadow-inner text-sm whitespace-pre-wrap;
   }
 
   :not(pre) > code {
     @apply text-[0.875em] px-1.5 py-0.5 bg-gray-100 border border-gray-200 rounded;
+  }
+
+  img {
+    @apply rounded-xl shadow-md;
   }
 }

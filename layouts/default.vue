@@ -1,6 +1,8 @@
 <template>
   <div class="flex flex-col text-mainText min-h-screen">
-    <nav class="top-0 fixed w-full px-8 py-4 backdrop-blur-lg bg-bgs-black/70">
+    <nav
+      class="top-0 fixed w-full px-8 py-4 backdrop-blur-lg bg-bgs-black/70 z-20"
+    >
       <NavbarShared />
     </nav>
 

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import "~/assets/blogStyle.css";
 const { params } = useRoute();
 const { data: blogPost } = await useAsyncData("blogPost", () =>
@@ -27,7 +27,11 @@ useSeoMeta({
 });
 </script>
 <template>
-  <Header :title="blogPost?.title!" :tagline="blogPost?.shortDescription" />
+  <Header
+    :title="blogPost?.title"
+    :tagline="blogPost?.shortDescription"
+    :image="blogPost?.image"
+  />
 
   <ContentRenderer v-if="blogPost" :value="blogPost">
     <article class="blog">
