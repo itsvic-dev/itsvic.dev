@@ -10,22 +10,23 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.0.6",
-    "@nuxt/image": "^1.1.0",
-    "@nuxtjs/tailwindcss": "^6.10.1",
-    "nuxt": "^3.8.2",
-    "vue": "^3.3.10",
-    "vue-router": "^4.2.5"
+    "@nuxt/devtools": "^1.7.0",
+    "@nuxt/image": "^1.10.0",
+    "@nuxtjs/tailwindcss": "^6.13.2",
+    "nuxt": "^3.16.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.0.16",
-    "@fontsource-variable/inter-tight": "^5.0.19",
-    "@heroicons/vue": "^2.0.18",
-    "@nuxt/content": "^2.9.0",
-    "@vueuse/core": "^10.7.0",
-    "sharp": "^0.33.1",
-    "simple-icons": "^10.2.0",
-    "tailwindcss": "^3.3.6"
+    "@fontsource-variable/inter": "^5.2.5",
+    "@fontsource-variable/inter-tight": "^5.2.5",
+    "@fontsource-variable/jetbrains-mono": "^5.2.5",
+    "@heroicons/vue": "^2.2.0",
+    "@nuxt/content": "^2.13.4",
+    "@vueuse/core": "^10.11.1",
+    "sharp": "^0.33.5",
+    "simple-icons": "^10.4.0",
+    "tailwindcss": "^3.4.17"
   },
   "packageManager": "pnpm@8.12.1"
 }

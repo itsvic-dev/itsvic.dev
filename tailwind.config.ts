@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default <Config>{
-  content: ["*.vue", "**/*.vue"],
+  content: ["*.vue", "pages/**/*.vue", "components/**/*.vue"],
   theme: {
     extend: {
       fontFamily: {
@@ -14,6 +14,7 @@ export default <Config>{
           "Arial",
           "sans-serif",
         ],
+        mono: ['"JetBrains Mono Variable"', "monospace"],
       },
       colors: {
         bgs: {

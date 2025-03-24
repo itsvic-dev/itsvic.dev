@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import "@fontsource-variable/inter/slnt.css";
+import "@fontsource-variable/inter/wght-italic.css";
 import "@fontsource-variable/inter-tight/wght-italic.css";
+import "@fontsource-variable/jetbrains-mono";
+
 useHead({
   htmlAttrs: {
     lang: "en",
