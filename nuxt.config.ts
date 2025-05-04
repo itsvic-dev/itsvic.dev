@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/content",
     "@nuxtjs/i18n",
-    "@vueuse/motion/nuxt",
   ],
 
   i18n: {

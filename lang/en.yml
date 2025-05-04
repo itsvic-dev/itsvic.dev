@@ -1,8 +1,18 @@
 navigation:
   home: Home
 
+shared:
+  website: Website
+
 home:
   tagline: Software developer and designer.
+
+projects:
+  parcel:
+    desc: Parcel is an Android app that lets you track your parcels from various providers at ease.
+    gplay: Download from Google Play
+  nova:
+    desc: Nova is a modern, customizable, and extensible theme for the Pterodactyl server management software.
 
 cv:
   birthday: "Birthday"

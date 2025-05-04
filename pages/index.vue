@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import { siBluesky, siMastodon, siGithub } from "simple-icons";
-import {
-  InformationCircleIcon,
-  ArrowLeftEndOnRectangleIcon,
-} from "@heroicons/vue/20/solid";
-import ParcelIcon from "~/assets/parcel.png";
 
-const localePath = useLocalePath();
+const { data: projects } = await useAsyncData("projects", () =>
+  $fetch("/api/projects"),
+);
 </script>
 
 <template>
@@ -53,29 +50,7 @@ const localePath = useLocalePath();
     <h2 class="font-display text-3xl font-bold">Projects</h2>
 
     <div class="mt-6 grid w-full gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <ProjectCard
-        title="Parcel"
-        :iconPath="ParcelIcon"
-        :languages="['Jetpack Compose', 'Kotlin']"
-      >
-        Parcel is an Android app for tracking parcels. It is currently in closed
-        beta.
-
-        <template #links>
-          <NuxtLink :to="localePath('/parcel')">
-            <InformationCircleIcon />
-            Learn more
-          </NuxtLink>
-          <a
-            href="https://groups.google.com/g/parcel-closed-beta-testing"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <ArrowLeftEndOnRectangleIcon />
-            Join the beta
-          </a>
-        </template>
-      </ProjectCard>
+      <ProjectCard v-for="project of projects" :project="project" />
     </div>
   </section>
 </template>

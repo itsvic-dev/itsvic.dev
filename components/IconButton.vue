@@ -11,7 +11,7 @@ defineProps<{
   <button
     :class="[
       'flex items-center gap-2 rounded-full px-4 py-1.5 transition-colors',
-      'shadow-inner',
+      'shadow-inner shadow-violet-900/30 hover:shadow-md',
       color === 'purple' && 'bg-violet-800 hover:bg-violet-600',
     ]"
   >

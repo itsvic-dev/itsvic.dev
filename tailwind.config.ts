@@ -10,7 +10,13 @@ export default <Config>{
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Inter"', "Helvetica", '"Segoe UI"', "Arial", "sans-serif"],
+        sans: [
+          '"Inter Variable"',
+          "Helvetica",
+          '"Segoe UI"',
+          "Arial",
+          "sans-serif",
+        ],
         display: [
           '"Poppins"',
           '"Inter Variable"',
