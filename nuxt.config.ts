@@ -17,6 +17,12 @@ export default defineNuxtConfig({
         name: "English",
         file: "en.yml",
       },
+      {
+        code: "pl",
+        language: "pl-PL",
+        name: "English",
+        file: "pl.yml",
+      },
     ],
     defaultLocale: "en",
     baseUrl: "https://itsvic.dev",

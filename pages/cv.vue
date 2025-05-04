@@ -53,6 +53,16 @@ const { data: projects } = await useAsyncData("projects", () =>
 
     <div>
       <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.qualifications.title") }}
+      </h2>
+      <ul class="ml-8 list-disc">
+        <li>{{ $t("cv.qualifications.inf02") }}</li>
+        <li>{{ $t("cv.qualifications.inf03") }}</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-display text-2xl font-bold">
         {{ $t("cv.skills.title") }}
       </h2>
       <h3 class="text-lg font-semibold">{{ $t("cv.skills.fullstack") }}</h3>

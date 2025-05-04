@@ -20,13 +20,18 @@ cv:
   birthday: "Birthday: {date}"
   email: "E-mail: {email}"
 
-  projectLanguages: "Programming languages: {langs}"
+  projectLanguages: "Languages and frameworks: {langs}"
+
+  qualifications:
+    title: "Qualifications"
+    inf02: "INF.02: Administration and operation of computer systems, peripheral devices and local computer networks - 89%"
+    inf03: "INF.03: Creation and administration of websites, web applications and databases - 96%"
 
   education:
     title: "Education"
     technical:
       name: "Technikum nr 8 im. Jana Karskiego in Warsaw"
-      status: "Complete"
+      status: "Completed"
       class: "IT Systems Administrator, Web Developer and Webmaster"
 
   skills:

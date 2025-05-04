@@ -1,0 +1,61 @@
+navigation:
+  home: Strona główna
+
+shared:
+  website: Strona
+  github: GitHub
+  gplay: Sklep Google Play
+
+home:
+  tagline: Programista i projektant oprogramowania.
+
+projects:
+  title: Projekty
+  parcel:
+    desc: Parcel to aplikacja na Androida, która umożliwia łatwe śledzenie paczek od różnych dostawców.
+  nova:
+    desc: Nova to nowoczesny, konfigurowalny i rozszerzalny motyw dla oprogramowania do zarządzania serwerami Pterodactyl.
+
+cv:
+  birthday: "Urodziny: {date}"
+  email: "E-mail: {email}"
+
+  projectLanguages: "Języki i frameworki: {langs}"
+
+  qualifications:
+    title: "Kwalifikacje"
+    inf02: "INF.02: Administrowanie i eksploatacja systemów komputerowych, urządzeń peryferyjnych i lokalnych sieci komputerowych – 89%"
+    inf03: "INF.03: Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych – 96%"
+
+  education:
+    title: "Edukacja"
+    technical:
+      name: "Technikum nr 8 im. Jana Karskiego w Warszawie"
+      status: "Ukończone"
+      class: "Administrator systemów IT, programista aplikacji internetowych i webmaster"
+
+  skills:
+    title: "Umiejętności"
+    fullstack: "Full-stack development aplikacji webowych"
+    ui: "Projektowanie interfejsów użytkownika i grafiki"
+    native: "Tworzenie natywnych aplikacji i gier"
+    mobile: "Tworzenie aplikacji mobilnych"
+
+  jobs:
+    title: "Doświadczenie zawodowe"
+    tasks: "Główne obowiązki:"
+
+    tmobile-intern:
+      name: "T-Mobile Polska S.A."
+      period: "Styczeń 2023"
+      title: "Praktyka jako administrator systemów"
+      tasks:
+        testLab: "Instalacja i konfiguracja maszyny wirtualnej z systemem Windows Server w środowisku testowym"
+        ad: "Konfiguracja kontrolera domeny Active Directory"
+        vms: "Instalacja i konfiguracja dwóch maszyn wirtualnych z systemem Windows 10 połączonych z domeną AD"
+        sccm: "Konfiguracja i użycie Microsoft Configuration Manager (SCCM)"
+
+  languages:
+    title: "Znajomość języków"
+    polish: "Polski: ojczysty"
+    english: "Angielski: komunikatywny"
