@@ -2,87 +2,84 @@
 import { CakeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
 
 const education = ["technical"];
-const jobs = ["itsvic", "tmobile-intern"];
+const jobs = ["tmobile-intern"];
 const tasks = {
-  itsvic: ["productDev", "support", "contract"],
   "tmobile-intern": ["testLab", "ad", "vms", "sccm"],
 };
 const languages = ["polish", "english"];
+
+const bday = new Date(2005, 4, 23);
 </script>
 
 <template>
   <main
-    class="py-16 px-4 print:p-2 max-w-5xl space-y-8 print:space-y-6 mx-auto print:text-black"
+    class="mx-auto max-w-5xl space-y-8 px-4 py-16 print:space-y-6 print:p-2 print:text-black"
   >
     <div class="flex items-start gap-6">
-      <img src="/imgs/icon.png" class="w-24 h-24" />
       <div class="space-y-1">
-        <h1 class="text-4xl font-bold font-display">Wiktor Bryk</h1>
-        <p class="flex gap-2 items-center">
-          <CakeIcon class="w-6 h-6" :title="$t('cv.birthday')" />
-          {{ $d(new Date(2005, 4, 23), "short") }}
+        <h1 class="font-display text-4xl font-bold">Wiktor Bryk</h1>
+        <p class="flex items-center gap-2">
+          <CakeIcon class="h-6 w-6" />
+          {{ $t("cv.birthday", { date: $d(bday, "short") }) }}
         </p>
-        <p class="flex gap-2 items-center">
-          <EnvelopeIcon class="w-6 h-6" title="E-mail" /> contact@itsvic.dev
+        <p class="flex items-center gap-2">
+          <EnvelopeIcon class="h-6 w-6" />
+          {{ $t("cv.email", { email: "contact@itsvic.dev" }) }}
         </p>
       </div>
     </div>
 
-    <div class="grid grid-cols-2">
-      <div>
-        <h2 class="font-display text-2xl font-bold">
-          {{ $t("cv.education.title") }}
-        </h2>
-        <ul class="list-disc ml-8">
-          <li v-for="item of education">
-            <span class="font-semibold">
-              {{ $t(`cv.education.${item}.name`) }}
-            </span>
-            <span class="ml-2 italic">
-              {{ $t(`cv.education.${item}.status`) }}
-            </span>
-            <br />
-            {{ $t(`cv.education.${item}.class`) }}
-          </li>
-        </ul>
-      </div>
+    <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.education.title") }}
+      </h2>
+      <ul class="ml-8 list-disc">
+        <li v-for="item of education">
+          <span class="font-semibold">
+            {{ $t(`cv.education.${item}.name`) }}
+          </span>
+          <span class="ml-2 italic">
+            {{ $t(`cv.education.${item}.status`) }}
+          </span>
+          <br />
+          {{ $t(`cv.education.${item}.class`) }}
+        </li>
+      </ul>
+    </div>
 
-      <div>
-        <h2 class="font-display text-2xl font-bold">
-          {{ $t("cv.languages.title") }}
-        </h2>
-        <ul class="list-disc ml-8">
-          <li v-for="item of languages">
-            {{ $t(`cv.languages.${item}`) }}
-          </li>
-        </ul>
-      </div>
+    <div>
+      <h2 class="font-display text-2xl font-semibold">test</h2>
     </div>
 
     <div>
       <h2 class="font-display text-2xl font-bold">
         {{ $t("cv.skills.title") }}
       </h2>
-      <h3 class="text-xl font-semibold">{{ $t("cv.skills.fullstack") }}</h3>
+      <h3 class="text-lg font-medium">{{ $t("cv.skills.fullstack") }}</h3>
       <p>
         React, Nuxt.js (Vue), TypeScript, Node.js (Express), Go, PHP (Laravel),
         Python (Flask, aiohttp)
       </p>
 
-      <h3 class="text-xl font-semibold mt-4">{{ $t("cv.skills.ui") }}</h3>
+      <h3 class="mt-4 text-lg font-medium">{{ $t("cv.skills.ui") }}</h3>
       <p>Figma, GIMP</p>
 
-      <h3 class="text-xl font-semibold mt-4">
+      <h3 class="mt-4 text-lg font-medium">
         {{ $t("cv.skills.native") }}
       </h3>
       <p>C, C++, Qt Quick, SDL2, GLFW, OpenGL 3.2+</p>
+
+      <h3 class="mt-4 text-lg font-medium">
+        {{ $t("cv.skills.mobile") }}
+      </h3>
+      <p>Android, Jetpack Compose, Kotlin</p>
     </div>
 
     <div>
       <h2 class="font-display text-2xl font-bold">
         {{ $t("cv.jobs.title") }}
       </h2>
-      <ul class="list-disc ml-8 space-y-4">
+      <ul class="ml-8 list-disc space-y-4">
         <li v-for="item of jobs">
           <p>
             <span class="font-bold">{{ $t(`cv.jobs.${item}.name`) }}</span>
@@ -98,6 +95,17 @@ const languages = ["polish", "english"];
               {{ $t(`cv.jobs.${item}.tasks.${task}`) }}
             </li>
           </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.languages.title") }}
+      </h2>
+      <ul class="ml-8 list-disc">
+        <li v-for="item of languages">
+          {{ $t(`cv.languages.${item}`) }}
         </li>
       </ul>
     </div>

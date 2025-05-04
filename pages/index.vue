@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { siBluesky, siMastodon, siGithub } from "simple-icons";
+import { siBluesky, siMastodon, siGithub, siTwitter } from "simple-icons";
 
 const { data: projects } = await useAsyncData("projects", () =>
   $fetch("/api/projects"),
@@ -13,6 +13,13 @@ const { data: projects } = await useAsyncData("projects", () =>
       <p class="text-xl text-violet-200">{{ $t("home.tagline") }}</p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a
+          href="https://x.com/@vic_hates_x"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <IconButton :icon="siTwitter" color="purple">Twitter</IconButton>
+        </a>
         <a
           href="https://bsky.app/profile/itsvic.dev"
           target="_blank"

@@ -6,7 +6,7 @@ const projects: Project[] = [
     languages: ["Jetpack Compose", "Kotlin"],
     links: [
       {
-        nameKey: "GitHub",
+        nameKey: "shared.github",
         icon: "github",
         href: "https://github.com/itsvic-dev/parcel",
         local: false,

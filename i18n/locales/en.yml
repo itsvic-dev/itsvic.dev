@@ -3,6 +3,7 @@ navigation:
 
 shared:
   website: Website
+  github: GitHub
 
 home:
   tagline: Software developer and designer.
@@ -15,7 +16,8 @@ projects:
     desc: Nova is a modern, customizable, and extensible theme for the Pterodactyl server management software.
 
 cv:
-  birthday: "Birthday"
+  birthday: "Birthday: {date}"
+  email: "E-mail: {email}"
 
   education:
     title: "Education"
@@ -33,15 +35,6 @@ cv:
   jobs:
     title: "Professional Experience"
     tasks: "Main responsibilities:"
-
-    itsvic:
-      name: "it's vic!"
-      period: "February 2024 – present"
-      title: "Full-stack web development, web design, contract work"
-      tasks:
-        productDev: "Development of products, such as themes or extensions, for Pterodactyl®, a game server management panel made with Laravel and React"
-        support: "Providing support to businesses and individuals for those products"
-        contract: "Contract work with companies to develop full-stack web applications"
 
     tmobile-intern:
       name: "T-Mobile Polska S.A."

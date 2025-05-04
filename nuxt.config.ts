@@ -10,24 +10,16 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    lazy: false,
-    langDir: "lang",
     locales: [
       {
         code: "en",
-        iso: "en-US",
-        name: "🇬🇧 English",
+        language: "en-US",
+        name: "English",
         file: "en.yml",
-      },
-      {
-        code: "pl",
-        iso: "pl-PL",
-        name: "🇵🇱 Polski",
-        file: "pl.yml",
       },
     ],
     defaultLocale: "en",
-
+    baseUrl: "https://itsvic.dev",
     detectBrowserLanguage: {
       useCookie: true,
       redirectOn: "root",
