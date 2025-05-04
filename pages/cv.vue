@@ -9,11 +9,15 @@ const tasks = {
 const languages = ["polish", "english"];
 
 const bday = new Date(2005, 4, 23);
+
+const { data: projects } = await useAsyncData("projects", () =>
+  $fetch("/api/projects"),
+);
 </script>
 
 <template>
   <main
-    class="mx-auto max-w-5xl space-y-8 px-4 py-16 print:space-y-6 print:p-2 print:text-black"
+    class="mx-auto max-w-5xl space-y-8 px-4 py-16 print:p-2 print:text-black"
   >
     <div class="flex items-start gap-6">
       <div class="space-y-1">
@@ -48,28 +52,24 @@ const bday = new Date(2005, 4, 23);
     </div>
 
     <div>
-      <h2 class="font-display text-2xl font-semibold">test</h2>
-    </div>
-
-    <div>
       <h2 class="font-display text-2xl font-bold">
         {{ $t("cv.skills.title") }}
       </h2>
-      <h3 class="text-lg font-medium">{{ $t("cv.skills.fullstack") }}</h3>
+      <h3 class="text-lg font-semibold">{{ $t("cv.skills.fullstack") }}</h3>
       <p>
         React, Nuxt.js (Vue), TypeScript, Node.js (Express), Go, PHP (Laravel),
         Python (Flask, aiohttp)
       </p>
 
-      <h3 class="mt-4 text-lg font-medium">{{ $t("cv.skills.ui") }}</h3>
+      <h3 class="mt-4 text-lg font-semibold">{{ $t("cv.skills.ui") }}</h3>
       <p>Figma, GIMP</p>
 
-      <h3 class="mt-4 text-lg font-medium">
+      <h3 class="mt-4 text-lg font-semibold">
         {{ $t("cv.skills.native") }}
       </h3>
       <p>C, C++, Qt Quick, SDL2, GLFW, OpenGL 3.2+</p>
 
-      <h3 class="mt-4 text-lg font-medium">
+      <h3 class="mt-4 text-lg font-semibold">
         {{ $t("cv.skills.mobile") }}
       </h3>
       <p>Android, Jetpack Compose, Kotlin</p>
@@ -95,6 +95,38 @@ const bday = new Date(2005, 4, 23);
               {{ $t(`cv.jobs.${item}.tasks.${task}`) }}
             </li>
           </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="font-display text-2xl font-semibold">
+        {{ $t("projects.title") }}
+      </h2>
+
+      <ul class="ml-8 list-disc space-y-4">
+        <li v-for="project of projects" class="space-y-1">
+          <p>
+            <b>{{ project.name }}</b
+            >: {{ $t(project.descKey) }}
+          </p>
+
+          <p>
+            {{
+              $t("cv.projectLanguages", { langs: project.languages.join(", ") })
+            }}
+          </p>
+
+          <p v-for="link of project.links">
+            {{ $t(link.nameKey) }}:
+            <a
+              class="underline"
+              :href="link.href"
+              target="_blank"
+              rel="noreferrer noopener"
+              >{{ link.href }}</a
+            >
+          </p>
         </li>
       </ul>
     </div>

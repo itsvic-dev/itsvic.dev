@@ -4,20 +4,23 @@ navigation:
 shared:
   website: Website
   github: GitHub
+  gplay: Google Play Store
 
 home:
   tagline: Software developer and designer.
 
 projects:
+  title: Projects
   parcel:
     desc: Parcel is an Android app that lets you track your parcels from various providers at ease.
-    gplay: Download from Google Play
   nova:
     desc: Nova is a modern, customizable, and extensible theme for the Pterodactyl server management software.
 
 cv:
   birthday: "Birthday: {date}"
   email: "E-mail: {email}"
+
+  projectLanguages: "Programming languages: {langs}"
 
   education:
     title: "Education"
@@ -31,6 +34,7 @@ cv:
     fullstack: "Full-stack web development"
     ui: "User interface and graphics design"
     native: "Native app and game development"
+    mobile: "Mobile app development"
 
   jobs:
     title: "Professional Experience"

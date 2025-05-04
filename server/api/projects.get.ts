@@ -12,7 +12,7 @@ const projects: Project[] = [
         local: false,
       },
       {
-        nameKey: "projects.parcel.gplay",
+        nameKey: "shared.gplay",
         icon: "gplay",
         href: "https://play.google.com/store/apps/details?id=dev.itsvic.parceltracker",
         local: false,

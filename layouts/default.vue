@@ -9,7 +9,7 @@ useHead({
 <template>
   <slot />
 
-  <footer class="mt-16 py-4 text-center text-xs text-zinc-300">
+  <footer class="mt-16 py-4 text-center text-xs text-zinc-300 print:hidden">
     it's vic! &copy; {{ new Date().getFullYear() }}
   </footer>
 </template>
