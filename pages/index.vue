@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { siBluesky, siMastodon, siGithub, siTwitter } from "simple-icons";
+import { siBluesky, siMastodon, siGithub, siX } from "simple-icons";
 
 const { data: projects } = await useAsyncData("projects", () =>
   $fetch("/api/projects"),
@@ -18,7 +18,7 @@ const { data: projects } = await useAsyncData("projects", () =>
           target="_blank"
           rel="noreferrer noopener"
         >
-          <IconButton :icon="siTwitter" color="purple">Twitter</IconButton>
+          <IconButton :icon="siX" color="purple">Twitter</IconButton>
         </a>
         <a
           href="https://bsky.app/profile/itsvic.dev"
@@ -44,13 +44,7 @@ const { data: projects } = await useAsyncData("projects", () =>
       </div>
     </div>
 
-    <svg
-      viewBox="0 0 10 10"
-      class="absolute -bottom-16 h-16 w-full"
-      preserveAspectRatio="none"
-    >
-      <polygon points="0 0, 10 0, 0 10" class="fill-violet-700" />
-    </svg>
+    <VioletSlice />
   </header>
 
   <section class="mx-auto w-full max-w-5xl px-8">

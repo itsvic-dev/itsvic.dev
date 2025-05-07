@@ -2,12 +2,18 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxt/image",
-    "@nuxt/content",
-    "@nuxtjs/i18n",
-  ],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "@nuxtjs/i18n"],
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "catppuccin-mocha",
+          langs: ["py", "asm"],
+        },
+      },
+    },
+  },
 
   i18n: {
     locales: [
