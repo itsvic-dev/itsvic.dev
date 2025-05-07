@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("blog").path(route.path).first();
+  return queryCollection("blog")
+    .path(`/blog/${route.params["slug"][0]}`)
+    .first();
 });
 </script>
 
@@ -12,7 +14,7 @@ const { data: page } = await useAsyncData(route.path, () => {
         {{ page?.title }}
       </h1>
       <p class="mt-4 text-xl text-violet-200" v-if="page">
-        Published on {{ $d(page.date) }}
+        {{ $t("blog.publishedOn", { date: $d(page.date) }) }}
       </p>
     </div>
 

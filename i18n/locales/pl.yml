@@ -16,6 +16,9 @@ projects:
   nova:
     desc: Nova to nowoczesny, konfigurowalny i rozszerzalny motyw dla oprogramowania do zarządzania serwerami Pterodactyl.
 
+blog:
+  publishedOn: "Opublikowano {date}"
+
 cv:
   birthday: "Urodziny: {date}"
   email: "E-mail: {email}"

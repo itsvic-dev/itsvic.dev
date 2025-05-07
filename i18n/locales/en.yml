@@ -16,6 +16,9 @@ projects:
   nova:
     desc: Nova is a modern, customizable, and extensible theme for the Pterodactyl server management software.
 
+blog:
+  publishedOn: "Published on {date}"
+
 cv:
   birthday: "Birthday: {date}"
   email: "E-mail: {email}"
