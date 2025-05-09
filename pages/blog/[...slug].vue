@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("blog")
+  return queryCollection("content")
     .path(`/blog/${route.params["slug"][0]}`)
     .first();
 });
