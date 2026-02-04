@@ -48,10 +48,27 @@ cv:
     title: "Doświadczenie zawodowe"
     tasks: "Główne obowiązki:"
 
+    dm-dev:
+      name: "Dream Machines"
+      period: "December 2025 - February 2026"
+      title: "Junior Software Developer"
+      tasks:
+        legacy: Utrzymywanie i naprawa starszego kodu oraz skryptów
+        newScripts: Rozwój nowych integracji z usługami firm trzecich
+        newPages: Tworzenie nowych stron i komponentów widocznych dla użytkowników
+
+    dm-service:
+      name: "Dream Machines"
+      period: "August 2025 - November 2025"
+      title: "Junior Service Specialist (Staż)"
+      tasks:
+        rma: Obsługa i serwisowanie zadań RMA (gwarancji)
+        assembly: Składanie laptopów dla użytkowników końcowych i dużych klientów
+
     tmobile-intern:
-      name: "T-Mobile Polska S.A."
+      name: "T-Mobile Polska"
       period: "Styczeń 2023"
-      title: "Praktyka jako administrator systemów"
+      title: "Praktyka jako System Adminitrator"
       tasks:
         testLab: "Instalacja i konfiguracja maszyny wirtualnej z systemem Windows Server w środowisku testowym"
         ad: "Konfiguracja kontrolera domeny Active Directory"

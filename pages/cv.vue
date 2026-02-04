@@ -1,10 +1,12 @@
 <script setup>
 import { CakeIcon, EnvelopeIcon } from "@heroicons/vue/24/solid";
 
-const education = ["technical"];
-const jobs = ["tmobile-intern"];
+const education = ["uni", "technical"];
+const jobs = ["dm-dev", "dm-service", "tmobile-intern"];
 const tasks = {
   "tmobile-intern": ["testLab", "ad", "vms", "sccm"],
+  "dm-service": ["rma", "assembly"],
+  "dm-dev": ["legacy", "newScripts", "newPages"],
 };
 const languages = ["polish", "english"];
 
@@ -35,58 +37,6 @@ const { data: projects } = await useAsyncData("projects", () =>
 
     <div>
       <h2 class="font-display text-2xl font-bold">
-        {{ $t("cv.education.title") }}
-      </h2>
-      <ul class="ml-8 list-disc">
-        <li v-for="item of education">
-          <span class="font-semibold">
-            {{ $t(`cv.education.${item}.name`) }}
-          </span>
-          <span class="ml-2 italic">
-            {{ $t(`cv.education.${item}.status`) }}
-          </span>
-          <br />
-          {{ $t(`cv.education.${item}.class`) }}
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="font-display text-2xl font-bold">
-        {{ $t("cv.qualifications.title") }}
-      </h2>
-      <ul class="ml-8 list-disc">
-        <li>{{ $t("cv.qualifications.inf02") }}</li>
-        <li>{{ $t("cv.qualifications.inf03") }}</li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 class="font-display text-2xl font-bold">
-        {{ $t("cv.skills.title") }}
-      </h2>
-      <h3 class="text-lg font-semibold">{{ $t("cv.skills.fullstack") }}</h3>
-      <p>
-        React, Nuxt.js (Vue), TypeScript, Node.js (Express), Go, PHP (Laravel),
-        Python (Flask, aiohttp)
-      </p>
-
-      <h3 class="mt-4 text-lg font-semibold">{{ $t("cv.skills.ui") }}</h3>
-      <p>Figma, GIMP</p>
-
-      <h3 class="mt-4 text-lg font-semibold">
-        {{ $t("cv.skills.native") }}
-      </h3>
-      <p>C, C++, Qt Quick, SDL2, GLFW, OpenGL 3.2+</p>
-
-      <h3 class="mt-4 text-lg font-semibold">
-        {{ $t("cv.skills.mobile") }}
-      </h3>
-      <p>Android, Jetpack Compose, Kotlin</p>
-    </div>
-
-    <div>
-      <h2 class="font-display text-2xl font-bold">
         {{ $t("cv.jobs.title") }}
       </h2>
       <ul class="ml-8 list-disc space-y-4">
@@ -110,6 +60,58 @@ const { data: projects } = await useAsyncData("projects", () =>
     </div>
 
     <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.education.title") }}
+      </h2>
+      <ul class="ml-8 list-disc space-y-2">
+        <li v-for="item of education">
+          <span class="font-semibold">
+            {{ $t(`cv.education.${item}.name`) }}
+          </span>
+          <span class="ml-2 italic">
+            {{ $t(`cv.education.${item}.status`) }}
+          </span>
+          <br />
+          {{ $t(`cv.education.${item}.class`) }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- <div>
+      <h2 class="font-display text-2xl font-bold">
+        {{ $t("cv.qualifications.title") }}
+      </h2>
+      <ul class="ml-8 list-disc">
+        <li>{{ $t("cv.qualifications.inf02") }}</li>
+        <li>{{ $t("cv.qualifications.inf03") }}</li>
+      </ul>
+    </div> -->
+
+    <div>
+      <h2 class="break-before-page font-display text-2xl font-bold">
+        {{ $t("cv.skills.title") }}
+      </h2>
+      <h3 class="text-lg font-semibold">{{ $t("cv.skills.fullstack") }}</h3>
+      <p>
+        React, Nuxt.js (Vue), TypeScript, Node.js (Express), PHP (Laravel),
+        Python (Flask, aiohttp)
+      </p>
+
+      <h3 class="mt-4 text-lg font-semibold">{{ $t("cv.skills.ui") }}</h3>
+      <p>Figma, GIMP</p>
+
+      <h3 class="mt-4 text-lg font-semibold">
+        {{ $t("cv.skills.native") }}
+      </h3>
+      <p>C, C++, Qt Quick</p>
+
+      <h3 class="mt-4 text-lg font-semibold">
+        {{ $t("cv.skills.mobile") }}
+      </h3>
+      <p>Android, Jetpack Compose, Kotlin</p>
+    </div>
+
+    <!-- <div>
       <h2 class="font-display text-2xl font-semibold">
         {{ $t("projects.title") }}
       </h2>
@@ -139,7 +141,7 @@ const { data: projects } = await useAsyncData("projects", () =>
           </p>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <div>
       <h2 class="font-display text-2xl font-bold">

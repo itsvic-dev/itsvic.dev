@@ -74,7 +74,7 @@ We don't have a lot of gadgets at our disposal. We can't directly manipulate RAX
 
 I was stuck here for a while as well. How can we control the value of RAX, seemingly without any way of doing so? The only thing that I could see modifying RAX is the `read` syscall, but that was getting modified soon after to call `write`, right?
 
-What I completely forgot at the time is that `write` returns the number of bytes it read. And the return value of syscalls lives in RAX!
+What I completely forgot at the time is that `write` returns the number of bytes it read. And the return value of syscalls is in RAX!
 
 ## Final plan of action
 

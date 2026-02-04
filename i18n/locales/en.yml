@@ -32,6 +32,11 @@ cv:
 
   education:
     title: "Education"
+    uni:
+      name: "Polski Uniwersytet Wirtualny"
+      status: "Ongoing (part-time studies)"
+      class: "Computer Science"
+
     technical:
       name: "Technikum nr 8 im. Jana Karskiego in Warsaw"
       status: "Completed"
@@ -48,8 +53,25 @@ cv:
     title: "Professional Experience"
     tasks: "Main responsibilities:"
 
+    dm-dev:
+      name: "Dream Machines"
+      period: "December 2025 - February 2026"
+      title: "Junior Software Developer"
+      tasks:
+        legacy: Maintaining and fixing up legacy code and scripts
+        newScripts: Developing new integrations with third-party service providers
+        newPages: Developing new user-facing pages and components
+
+    dm-service:
+      name: Dream Machines
+      period: "August 2025 - November 2025"
+      title: "Junior Service Specialist (Intern)"
+      tasks:
+        rma: Handling and servicing RMA (warranty) tasks
+        assembly: Assembling laptops for end-users and large customers
+
     tmobile-intern:
-      name: "T-Mobile Polska S.A."
+      name: "T-Mobile Polska"
       period: "January 2023"
       title: "Internship as a System Administrator"
       tasks:
