@@ -18,6 +18,7 @@ projects:
 
 blog:
   publishedOn: "Opublikowano {date}"
+  latestPosts: Najnowsze posty
 
 cv:
   birthday: "Urodziny: {date}"

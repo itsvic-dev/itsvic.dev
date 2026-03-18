@@ -48,10 +48,16 @@ const { data: projects } = await useAsyncData("projects", () =>
   </header>
 
   <section class="mx-auto w-full max-w-5xl px-8">
-    <h2 class="font-display text-3xl font-bold">Projects</h2>
+    <h2 class="font-display text-3xl font-bold">{{ $t("projects.title") }}</h2>
 
     <div class="mt-6 grid w-full gap-4 md:grid-cols-2 lg:grid-cols-3">
       <ProjectCard v-for="project of projects" :project="project" />
     </div>
+  </section>
+
+  <section class="mx-auto mt-16 w-full max-w-5xl px-8">
+    <h2 class="font-display text-3xl font-bold">
+      {{ $t("blog.latestPosts") }}
+    </h2>
   </section>
 </template>

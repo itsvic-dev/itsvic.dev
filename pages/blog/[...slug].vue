@@ -16,8 +16,8 @@ const { data: page } = await useAsyncData(route.path, () => {
       <p class="mt-4 text-xl text-violet-200" v-if="page">
         {{ $t("blog.publishedOn", { date: $d(page.date) }) }}
       </p>
+      <BackButton />
     </div>
-
     <VioletSlice />
   </header>
 
