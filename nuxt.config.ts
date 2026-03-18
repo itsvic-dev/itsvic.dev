@@ -13,6 +13,10 @@ export default defineNuxtConfig({
         },
       },
     },
+    database: {
+      type: "d1",
+      bindingName: "DB",
+    },
   },
 
   i18n: {
