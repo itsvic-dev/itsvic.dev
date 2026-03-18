@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import "@fontsource-variable/inter";
 import "@fontsource/poppins/700.css";
+import IconRound from "~/assets/icon round.png";
 
 const { locale } = useI18n();
 
 const i18nHead = useLocaleHead({
-  addSeoAttributes: true,
-  addDirAttribute: true,
+  dir: true,
+  seo: true,
 });
 
 useHead({
@@ -15,7 +16,17 @@ useHead({
   htmlAttrs: {
     lang: locale.value,
   },
+
+  link: [{
+    rel: 'icon',
+    href: IconRound,
+    type: 'image/png',
+  }],
 });
+
+useSeoMeta({
+  themeColor: '#6d28d9'
+})
 </script>
 
 <template>

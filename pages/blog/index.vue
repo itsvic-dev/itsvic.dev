@@ -1,3 +1,7 @@
+<script setup>
+useHead({ title: $t("blog.allPosts") });
+</script>
+
 <template>
   <header class="relative mb-32 bg-violet-700">
     <div class="mx-auto px-8 py-16 text-center lg:py-24">

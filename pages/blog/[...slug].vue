@@ -2,8 +2,19 @@
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection("content")
-    .path(`/blog/${route.params["slug"][0]}`)
+    .path(route.path)
     .first();
+});
+
+useSeoMeta({
+  title: page.value!.title,
+  ogTitle: page.value!.title,
+  twitterTitle: page.value!.title,
+  description: page.value!.description,
+  ogDescription: page.value!.description,
+  ogImage: "https://itsvic.dev" + page.value!.image,
+  twitterImage: "https://itsvic.dev" + page.value!.image,
+  twitterCard: 'summary_large_image',
 });
 </script>
 
@@ -14,7 +25,7 @@ const { data: page } = await useAsyncData(route.path, () => {
         {{ page?.title }}
       </h1>
       <p class="mt-4 text-xl text-violet-200" v-if="page">
-        {{ $t("blog.publishedOn", { date: $d(page.date) }) }}
+        {{ $t("blog.publishedOn", { date: $d(new Date(page.date)) }) }}
       </p>
       <BackButton />
     </div>
