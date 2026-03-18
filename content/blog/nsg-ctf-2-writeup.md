@@ -8,7 +8,7 @@ description: "An exploration of ROP chains and sigreturn."
 
 [NSG650](https://github.com/NSG650), a friend of mine, is running a series of CTFs as a kind of entrance exam to his private server. I'm already in it, but for fun I decided to participate in them as well.
 
-This second CTF is a binary exploitation CTF. He provided an [x86-64 Linux binary](/assets/blog/s){target="\_blank" download="s"}, which is a simple program written in assembly.
+This second CTF is a binary exploitation CTF. He provided an [x86-64 Linux binary](/assets/blog/0x650/s){target="\_blank" download="s"}, which is a simple program written in assembly.
 
 I never participated in a binary exploitation CTF, so I thought this would be a very nice learning experience, on top of all of the theoretical knowledge I already gained from binging too many LiveOverflow videos. :P
 
@@ -135,7 +135,7 @@ p.interactive()
 
 And here it is in action, giving us the flag!
 
-![A screenshot showing the final exploit code on the left and a terminal running it on the right, with the flag on screen](/assets/blog/0x650-result.png)
+![A screenshot showing the final exploit code on the left and a terminal running it on the right, with the flag on screen](/assets/blog/0x650/result.png)
 
 ## Conclusion
 
