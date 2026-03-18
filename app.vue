@@ -11,7 +11,7 @@ const i18nHead = useLocaleHead({
 
 useHead({
   ...i18nHead.value,
-  titleTemplate: "%s %separator it's vic!",
+  titleTemplate: (title: str) => !title ? "it's vic!" : `${title} - it's vic!`,
   htmlAttrs: {
     lang: locale.value,
   },
