@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ArrowRightIcon } from "@heroicons/vue/24/solid";
+import { ArrowLeftIcon } from "@heroicons/vue/24/solid";
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import { ArrowRightIcon } from "@heroicons/vue/24/solid";
         'bg-violet-800 hover:bg-violet-600',
       ]"
     >
-      <ArrowRightIcon class="size-6" />
+      <ArrowLeftIcon class="size-6" />
       {{ $t("navigation.back") }}
     </button>
   </NuxtLink>
