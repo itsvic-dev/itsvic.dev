@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { siBluesky, siMastodon, siGithub, siX } from "simple-icons";
+import { ArrowRightIcon } from "@heroicons/vue/20/solid";
 
 const { data: projects } = await useAsyncData("projects", () =>
   $fetch("/api/projects"),
@@ -59,5 +60,17 @@ const { data: projects } = await useAsyncData("projects", () =>
     <h2 class="font-display text-3xl font-bold">
       {{ $t("blog.latestPosts") }}
     </h2>
+
+    <BlogPostGrid :limit="3" />
+
+    <div class="mt-4">
+      <NuxtLink
+        to="/blog"
+        class="inline-block transition-transform hover:translate-x-2"
+      >
+        {{ $t("blog.allPosts") }}
+        <ArrowRightIcon class="inline-block size-5" />
+      </NuxtLink>
+    </div>
   </section>
 </template>

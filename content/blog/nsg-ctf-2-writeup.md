@@ -1,6 +1,7 @@
 ---
 image: /assets/blog/0x650.png
 date: "2025-03-26T19:36:00Z"
+description: "An exploration of ROP chains and sigreturn."
 ---
 
 # 0x650 CTF, part 2: Binary exploitation

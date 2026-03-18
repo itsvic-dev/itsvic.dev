@@ -13,7 +13,7 @@ import { ArrowRightIcon } from "@heroicons/vue/24/outline";
       ]"
     >
       <ArrowRightIcon class="size-6" />
-      Go back
+      {{ $t("navigation.back") }}
     </button>
   </NuxtLink>
 </template>

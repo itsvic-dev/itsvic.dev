@@ -1,5 +1,6 @@
 navigation:
   home: Strona główna
+  back: Wróć
 
 shared:
   website: Strona
@@ -19,6 +20,7 @@ projects:
 blog:
   publishedOn: "Opublikowano {date}"
   latestPosts: Najnowsze posty
+  allPosts: Wszystkie posty
 
 cv:
   birthday: "Urodziny: {date}"
