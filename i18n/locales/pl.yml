@@ -1,0 +1,84 @@
+navigation:
+  home: Strona główna
+  back: Wróć
+
+shared:
+  website: Strona
+  github: GitHub
+  gplay: Sklep Google Play
+
+home:
+  tagline: Programista i projektant oprogramowania.
+
+projects:
+  title: Projekty
+  parcel:
+    desc: Parcel to aplikacja na Androida, która umożliwia łatwe śledzenie paczek od różnych dostawców.
+  nova:
+    desc: Nova to nowoczesny, konfigurowalny i rozszerzalny motyw dla oprogramowania do zarządzania serwerami Pterodactyl.
+
+blog:
+  publishedOn: "Opublikowano {date}"
+  latestPosts: Najnowsze posty
+  allPosts: Wszystkie posty
+
+cv:
+  birthday: "Urodziny: {date}"
+  email: "E-mail: {email}"
+
+  projectLanguages: "Języki i frameworki: {langs}"
+
+  qualifications:
+    title: "Kwalifikacje"
+    inf02: "INF.02: Administrowanie i eksploatacja systemów komputerowych, urządzeń peryferyjnych i lokalnych sieci komputerowych – 89%"
+    inf03: "INF.03: Tworzenie i administrowanie stronami i aplikacjami internetowymi oraz bazami danych – 96%"
+
+  education:
+    title: "Edukacja"
+    technical:
+      name: "Technikum nr 8 im. Jana Karskiego w Warszawie"
+      status: "Ukończone"
+      class: "Administrator systemów IT, programista aplikacji internetowych i webmaster"
+
+  skills:
+    title: "Umiejętności"
+    fullstack: "Full-stack development aplikacji webowych"
+    ui: "Projektowanie interfejsów użytkownika i grafiki"
+    native: "Tworzenie natywnych aplikacji i gier"
+    mobile: "Tworzenie aplikacji mobilnych"
+
+  jobs:
+    title: "Doświadczenie zawodowe"
+    tasks: "Główne obowiązki:"
+
+    dm-dev:
+      name: "Dream Machines"
+      period: "December 2025 - February 2026"
+      title: "Junior Software Developer"
+      tasks:
+        legacy: Utrzymywanie i naprawa starszego kodu oraz skryptów
+        newScripts: Rozwój nowych integracji z usługami firm trzecich
+        newPages: Tworzenie nowych stron i komponentów widocznych dla użytkowników
+
+    dm-service:
+      name: "Dream Machines"
+      period: "August 2025 - November 2025"
+      title: "Junior Service Specialist (Staż)"
+      tasks:
+        rma: Obsługa i serwisowanie zadań RMA (gwarancji)
+        assembly: Składanie laptopów dla użytkowników końcowych i dużych klientów
+
+    tmobile-intern:
+      name: "T-Mobile Polska"
+      period: "Styczeń 2023"
+      title: "Praktyka jako System Adminitrator"
+      tasks:
+        testLab: "Instalacja i konfiguracja maszyny wirtualnej z systemem Windows Server w środowisku testowym"
+        ad: "Konfiguracja kontrolera domeny Active Directory"
+        vms: "Instalacja i konfiguracja dwóch maszyn wirtualnych z systemem Windows 10 połączonych z domeną AD"
+        sccm: "Konfiguracja i użycie Microsoft Configuration Manager (SCCM)"
+
+  languages:
+    title: "Znajomość języków"
+    polish: "Polski: ojczysty"
+    english: "Angielski: biegły"

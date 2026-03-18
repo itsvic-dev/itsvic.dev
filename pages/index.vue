@@ -1,101 +1,76 @@
 <script setup lang="ts">
-const { data: projects } = useAsyncData("projects", () =>
-  queryContent("/projects")
-    .sort({ pubDate: -1 })
-    .limit(3)
-    .only(["title", "shortDescription", "image", "framework", "_path"])
-    .find()
+import { siBluesky, siMastodon, siGithub, siX } from "simple-icons";
+import { ArrowRightIcon } from "@heroicons/vue/20/solid";
+
+const { data: projects } = await useAsyncData("projects", () =>
+  $fetch("/api/projects"),
 );
-const { data: blog } = useAsyncData("blog", () =>
-  queryContent("/blog")
-    .sort({ pubDate: -1 })
-    .limit(3)
-    .only(["title", "shortDescription", "image", "_path"])
-    .find()
-);
-useSeoMeta({
-  title: "it's vic!",
-  ogTitle: "it's vic!",
-  description: "A software developer and designer from Poland.",
-  ogDescription: "A software developer and designer from Poland.",
-  twitterCard: "summary_large_image",
-});
 </script>
 
 <template>
-  <!-- hero -->
-  <Header
-    pre-title="hey,"
-    title="it's vic!"
-    tagline="a software developer and designer."
-  />
+  <header class="relative mb-32 bg-violet-700">
+    <div class="mx-auto px-8 py-24 text-center lg:py-32">
+      <h1 class="font-display text-5xl font-bold text-violet-50">it's vic!</h1>
+      <p class="text-xl text-violet-200">{{ $t("home.tagline") }}</p>
 
-  <main class="mx-auto max-w-7xl my-16 px-8 md:px-16">
-    <h1 class="text-4xl font-bold italic text-headerText">About me</h1>
-    <p class="mt-2">
-      hi there! I'm a 19 year old software developer and designer from Poland.
-    </p>
-    <p class="mt-1">
-      I work on various projects, and like to write about them on my blog. you
-      can check them out below!
-    </p>
-
-    <p class="mt-4">
-      this website sucks ass jesus christ please yell at me to finish the
-      redesign
-    </p>
-
-    <Separator />
-
-    <div class="flex justify-between items-center gap-6 flex-wrap">
-      <div>
-        <h1 class="text-4xl font-bold italic text-headerText">
-          Latest blog posts
-        </h1>
-        <p class="mt-1">some of the stuff I write about.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a
+          href="https://x.com/@vic_hates_x"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <IconButton :icon="siX" color="purple">Twitter</IconButton>
+        </a>
+        <a
+          href="https://bsky.app/profile/itsvic.dev"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <IconButton :icon="siBluesky" color="purple">Bluesky</IconButton>
+        </a>
+        <a
+          href="https://social.itsvic.dev/@vic"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <IconButton :icon="siMastodon" color="purple">Fediverse</IconButton>
+        </a>
+        <a
+          href="https://github.com/itsvic-dev"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <IconButton :icon="siGithub" color="purple">GitHub</IconButton>
+        </a>
       </div>
-      <NuxtLink to="/blog">
-        <Button>Show all</Button>
-      </NuxtLink>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
-      <NuxtLink v-for="blogPost in blog" :to="blogPost._path">
-        <BlogCard
-          :title="blogPost.title!"
-          :short-desc="blogPost.shortDescription"
-          :image="blogPost.image"
-        />
-      </NuxtLink>
     </div>
 
-    <Separator />
+    <VioletSlice />
+  </header>
 
-    <div class="flex justify-between items-center gap-6 flex-wrap">
-      <div>
-        <h1 class="text-4xl font-bold italic text-headerText">
-          Latest projects
-        </h1>
-        <p class="mt-1">some of the stuff I work on.</p>
-      </div>
-      <NuxtLink to="/projects">
-        <Button>Show all</Button>
+  <section class="mx-auto w-full max-w-5xl px-8">
+    <h2 class="font-display text-3xl font-bold">{{ $t("projects.title") }}</h2>
+
+    <div class="mt-6 grid w-full gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <ProjectCard v-for="project of projects" :project="project" />
+    </div>
+  </section>
+
+  <section class="mx-auto mt-16 w-full max-w-5xl px-8">
+    <h2 class="font-display text-3xl font-bold">
+      {{ $t("blog.latestPosts") }}
+    </h2>
+
+    <BlogPostGrid :limit="3" />
+
+    <div class="mt-4">
+      <NuxtLink
+        to="/blog"
+        class="inline-block transition-transform hover:translate-x-2"
+      >
+        {{ $t("blog.allPosts") }}
+        <ArrowRightIcon class="inline-block size-5" />
       </NuxtLink>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-4 gap-8">
-      <NuxtLink v-for="project in projects" :to="project._path">
-        <ProjectCard
-          :title="project.title!"
-          :framework="project.framework"
-          :short-desc="project.shortDescription"
-          :image="project.image"
-        />
-      </NuxtLink>
-    </div>
-
-    <!-- TODO: social media section
-    <Separator />
-    <h1 class="text-4xl font-bold italic text-headerText">Social media</h1>
-    <p class="mt-1">you can find my thoughts in lots of places.</p>
-    -->
-  </main>
+  </section>
 </template>

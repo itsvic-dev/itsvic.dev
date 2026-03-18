@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import "@fontsource-variable/inter/wght-italic.css";
-import "@fontsource-variable/inter-tight/wght-italic.css";
-import "@fontsource-variable/jetbrains-mono";
+import "@fontsource-variable/inter";
+import "@fontsource/poppins/700.css";
+
+const { locale } = useI18n();
+
+const i18nHead = useLocaleHead({
+  addSeoAttributes: true,
+  addDirAttribute: true,
+});
 
 useHead({
+  ...i18nHead.value,
+  titleTemplate: "%s %separator it's vic!",
   htmlAttrs: {
-    lang: "en",
+    lang: locale.value,
   },
-  title: "it's vic!",
-  script: [
-    {
-      src: "https://plausible.itsvic.dev/js/script.js",
-      defer: true,
-      "data-domain": "itsvic.dev",
-    },
-  ],
 });
 </script>
 

@@ -1,0 +1,89 @@
+navigation:
+  home: Home
+  back: Go back
+
+shared:
+  website: Website
+  github: GitHub
+  gplay: Google Play Store
+
+home:
+  tagline: Software developer and designer.
+
+projects:
+  title: Projects
+  parcel:
+    desc: Parcel is an Android app that lets you track your parcels from various providers at ease.
+  nova:
+    desc: Nova is a modern, customizable, and extensible theme for the Pterodactyl server management software.
+
+blog:
+  publishedOn: "Published on {date}"
+  latestPosts: Latest blog posts
+  allPosts: All blog posts
+
+cv:
+  birthday: "Birthday: {date}"
+  email: "E-mail: {email}"
+
+  projectLanguages: "Languages and frameworks: {langs}"
+
+  qualifications:
+    title: "Qualifications"
+    inf02: "INF.02: Administration and operation of computer systems, peripheral devices and local computer networks - 89%"
+    inf03: "INF.03: Creation and administration of websites, web applications and databases - 96%"
+
+  education:
+    title: "Education"
+    uni:
+      name: "Polski Uniwersytet Wirtualny"
+      status: "Ongoing (part-time studies)"
+      class: "Computer Science"
+
+    technical:
+      name: "Technikum nr 8 im. Jana Karskiego in Warsaw"
+      status: "Completed"
+      class: "IT Systems Administrator, Web Developer and Webmaster"
+
+  skills:
+    title: "Skills"
+    fullstack: "Full-stack web development"
+    ui: "User interface and graphics design"
+    native: "Native app and game development"
+    mobile: "Mobile app development"
+
+  jobs:
+    title: "Professional Experience"
+    tasks: "Main responsibilities:"
+
+    dm-dev:
+      name: "Dream Machines"
+      period: "December 2025 - February 2026"
+      title: "Junior Software Developer"
+      tasks:
+        legacy: Maintaining and fixing up legacy code and scripts
+        newScripts: Developing new integrations with third-party service providers
+        newPages: Developing new user-facing pages and components
+
+    dm-service:
+      name: Dream Machines
+      period: "August 2025 - November 2025"
+      title: "Junior Service Specialist (Intern)"
+      tasks:
+        rma: Handling and servicing RMA (warranty) tasks
+        assembly: Assembling laptops for end-users and large customers
+
+    tmobile-intern:
+      name: "T-Mobile Polska"
+      period: "January 2023"
+      title: "Internship as a System Administrator"
+      tasks:
+        testLab: "Installation and configuration of a Windows Server virtual machine in a test lab"
+        ad: "Configuration of an Active Directory Domain Controller"
+        vms: "Installation and configuration of two Windows 10 virtual machines connected to the AD domain"
+        sccm: "Configuration and usage of Microsoft Configuration Manager (SCCM)"
+
+  languages:
+    title: "Language skills"
+    polish: "Polish: native"
+    english: "English: proficient"

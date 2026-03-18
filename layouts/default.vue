@@ -1,17 +1,19 @@
+<script setup>
+useHead({
+  bodyAttrs: {
+    class: "bg-zinc-900 text-zinc-50",
+  },
+});
+</script>
+
 <template>
-  <div class="flex flex-col text-mainText min-h-screen">
-    <nav
-      class="top-0 fixed w-full px-8 py-4 backdrop-blur-lg bg-bgs-black/70 z-20"
-    >
-      <NavbarShared />
-    </nav>
+  <slot />
 
-    <div class="flex-1">
-      <slot />
-    </div>
+  <ClientOnly>
+    <FloatingSidebar />
+  </ClientOnly>
 
-    <footer class="py-6 px-4 text-center bg-bgs-black text-contrastText">
-      Copyright &copy; {{ new Date().getFullYear() }} it's vic!
-    </footer>
-  </div>
+  <footer class="mt-16 py-4 text-center text-xs text-zinc-300 print:hidden">
+    it's vic! &copy; {{ new Date().getFullYear() }}
+  </footer>
 </template>

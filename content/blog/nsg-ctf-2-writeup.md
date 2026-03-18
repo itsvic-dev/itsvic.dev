@@ -1,14 +1,14 @@
 ---
-shortDescription: Binary exploitation
-image: /imgs/blog/0x650.png
-pubDate: "2025-03-26T19:36:00Z"
+image: /assets/blog/0x650.png
+date: "2025-03-26T19:36:00Z"
+description: "An exploration of ROP chains and sigreturn."
 ---
 
-# 0x650 CTF, part 2
+# 0x650 CTF, part 2: Binary exploitation
 
 [NSG650](https://github.com/NSG650), a friend of mine, is running a series of CTFs as a kind of entrance exam to his private server. I'm already in it, but for fun I decided to participate in them as well.
 
-This second CTF is a binary exploitation CTF. He provided an [x86-64 Linux binary](/assets/0x650/s){target="\_blank" download="s"}, which is a simple program written in assembly.
+This second CTF is a binary exploitation CTF. He provided an [x86-64 Linux binary](/assets/blog/s){target="\_blank" download="s"}, which is a simple program written in assembly.
 
 I never participated in a binary exploitation CTF, so I thought this would be a very nice learning experience, on top of all of the theoretical knowledge I already gained from binging too many LiveOverflow videos. :P
 
@@ -75,7 +75,7 @@ We don't have a lot of gadgets at our disposal. We can't directly manipulate RAX
 
 I was stuck here for a while as well. How can we control the value of RAX, seemingly without any way of doing so? The only thing that I could see modifying RAX is the `read` syscall, but that was getting modified soon after to call `write`, right?
 
-What I completely forgot at the time is that `write` returns the number of bytes it read. And the return value of syscalls lives in RAX!
+What I completely forgot at the time is that `write` returns the number of bytes it read. And the return value of syscalls is in RAX!
 
 ## Final plan of action
 
@@ -135,7 +135,7 @@ p.interactive()
 
 And here it is in action, giving us the flag!
 
-![A screenshot showing the final exploit code on the left and a terminal running it on the right, with the flag on screen](/imgs/blog/0x650-result.png)
+![A screenshot showing the final exploit code on the left and a terminal running it on the right, with the flag on screen](/assets/blog/0x650-result.png)
 
 ## Conclusion
 
