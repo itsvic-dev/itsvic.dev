@@ -42,5 +42,15 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2025-01-11",
+  vite: {
+    optimizeDeps: {
+      include: [
+        "simple-icons",
+        "@heroicons/vue/20/solid",
+        "@heroicons/vue/24/solid",
+      ],
+    },
+  },
+
+  compatibilityDate: "2026-03-19",
 });
