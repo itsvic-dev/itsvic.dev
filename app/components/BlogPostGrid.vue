@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{ limit?: number }>();
 
-const { data: pages } = await useAsyncData(`posts-${props.limit}`, () =>
+const { data: pages } = useAsyncData(`posts-${props.limit}`, () =>
   queryCollection("content")
     .select("title", "image", "date", "description", "path")
     .order("date", "DESC")
@@ -27,7 +27,7 @@ const { data: pages } = await useAsyncData(`posts-${props.limit}`, () =>
             'linear-gradient(to bottom, rgb(0 0 0 / 0) 0%, rgb(0 0 0 / 0.2) 10%, rgb(0 0 0 / 1) 100%)',
         }"
       >
-        <p class="text-xs opacity-80">{{ $d(page.date) }}</p>
+        <p class="text-xs opacity-80">{{ $d(new Date(page.date)) }}</p>
         <h3
           class="mb-1 flex items-center gap-2 font-display text-2xl font-bold"
         >

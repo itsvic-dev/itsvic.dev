@@ -52,5 +52,9 @@ export default defineNuxtConfig({
     },
   },
 
+  experimental: {
+    viewTransition: true,
+  },
+
   compatibilityDate: "2026-03-19",
 });

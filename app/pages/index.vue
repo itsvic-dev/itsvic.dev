@@ -2,7 +2,7 @@
 import { siBluesky, siMastodon, siGithub, siX } from "simple-icons";
 import { ArrowRightIcon } from "@heroicons/vue/20/solid";
 
-const { data: projects } = await useAsyncData("projects", () =>
+const { data: projects } = useAsyncData("projects", () =>
   $fetch("/api/projects"),
 );
 </script>
